@@ -1,0 +1,248 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+html, body {
+  background: #EBBAB9;
+  color: #071108;
+  width: 100%;
+  max-width: 100%;
+  height: 100%;
+  overflow-x: clip;
+  scroll-behavior: smooth;
+}
+
+#root {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+button.primary {
+  background: #EF6F6C;
+  box-shadow: 0px 5px black;
+  margin: 10px;
+  border: 2px solid #071108;
+  border-radius: 10px;
+  outline: none;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+button.primary a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  padding: 10px 20px;
+}
+
+p {
+  margin: 16px 0px;
+  font-size: 1.2em;
+  line-height: 2em;
+}
+
+ul li {
+  list-style: none;
+  display: inline-block;
+  margin: 10px;
+}
+
+a {
+  color: #071108;
+  text-decoration: none;
+}
+
+header {
+  background: #5AD2F4;
+  width: 100%;
+  height: 90px;
+  border-bottom: 3px solid #071108;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+header > div {
+  width: 90%;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 30px;
+}
+header h1 {
+  font-weight: 900;
+}
+
+main {
+  width: 100%;
+}
+main > div {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-around;
+  align-items: center;
+  justify-content: none;
+}
+main section {
+  width: 80%;
+  margin: 100px 0px;
+}
+
+section#intro {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-around;
+  align-items: center;
+  gap: 30px;
+}
+section#intro div.imgDiv {
+  width: 100%;
+  height: 100%;
+  border: 5px solid #071108;
+  border-radius: 10px;
+}
+
+section#about {
+  text-align: center;
+}
+section#about > div {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-around;
+  align-items: center;
+  gap: 30px;
+}
+section#about > div h2 {
+  font-weight: normal;
+  font-size: 2em;
+  margin: 0px;
+}
+section#about > div h2 span {
+  font: 900 3em sans-serif;
+}
+section#about h1 {
+  font-size: 3em;
+  margin: 40px 0px;
+}
+
+section#pals {
+  background: #071108;
+  color: white;
+  width: 100%;
+  height: 600px;
+  margin: 0;
+  text-align: center;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-around;
+  align-items: center;
+  position: relative;
+}
+section#pals > div {
+  height: 70%;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-around;
+  align-items: center;
+}
+section#pals h1 {
+  font: 900 3em sans-serif;
+  color: #EF6F6C;
+}
+section#pals h2 {
+  color: #EF6F6C;
+  font: 900 2em sans-serif;
+}
+section#pals h2 span {
+  font: normal 0.6em sans-serif;
+}
+section#pals p {
+  width: 60%;
+}
+section#pals .palsComp {
+  background: #EF6F6C;
+  box-shadow: 0px 10px black;
+  width: 80%;
+  height: 100px;
+  border: 3px solid black;
+  border-radius: 20px;
+  position: absolute;
+  top: 90%;
+}
+
+section#services > div {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-around;
+  align-items: center;
+  gap: 30px;
+}
+section#services .services {
+  box-shadow: -10px 10px black;
+  width: 400px;
+  height: 600px;
+  padding: 20px;
+  margin: 10px;
+  border: 3px solid black;
+  border-radius: 20px;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-around;
+  align-items: center;
+}
+section#services .services button {
+  border-radius: 20px;
+  width: 90%;
+}
+section#services .services:nth-child(2) .primary {
+  background: #5AD2F4;
+}
+section#services .services:nth-child(3) .primary {
+  background: #7FB685;
+}
+section#services h1 {
+  font: 900 3em sans-serif;
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+section#reach {
+  height: 900px;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-around;
+  align-items: center;
+  gap: 30px;
+}
+section#reach .ceo {
+  background: white;
+  width: 500px;
+  height: 150px;
+  border: 5px solid black;
+  border-radius: 20px;
+  transform: perspective(10px) rotateX(1deg);
+}
+section#reach .earth {
+  background: #5AD2F4;
+  width: 400px;
+  height: 400px;
+  border: 10px solid black;
+  border-radius: 50%;
+}
+
+footer {
+  background: #071108;
+  color: white;
+  width: 100%;
+  height: 200px;
+  position: relative;
+  bottom: 0;
+  margin-top: auto;
+}
+
+/*# sourceMappingURL=index.css.map */
