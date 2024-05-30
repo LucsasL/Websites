@@ -31,6 +31,10 @@ button.primary {
   @include primaryButton;
 }
 
+button.secondary {
+  @include secondaryButton;
+}
+
 // Text Settings
 p {
   margin: 16px 0px;
@@ -49,4 +53,17 @@ ul {
 a {
   color: $dark;
   text-decoration: none;
+}
+
+input {
+  padding: 12px 20px;
+  border: none;
+  border-radius: 20px;
+  outline: none;
+}
+
+// Media Settings
+picture img {
+  width: 100%;
+  height: 100%;
 }

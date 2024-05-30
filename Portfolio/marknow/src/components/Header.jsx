@@ -12,19 +12,19 @@ const Header = () => {
           <div>
             <ul>
               <li>
-                <a href="#intro">HOME</a>
+                <a href="index.html">HOME</a>
               </li>
 
               <li>
-                <a href="#about">ABOUT US</a>
+                <a href="about.html">ABOUT US</a>
               </li>
 
               <li>
-                 <a href="services">SERVICES</a>
+                 <a href="#services">SERVICES</a>
                 </li>
 
               <li>
-                <a href="contact">CONTACT</a>
+                <a href="contact.html">CONTACT</a>
               </li>
 
             </ul>

@@ -29,15 +29,43 @@ button.primary {
   border-radius: 10px;
   outline: none;
   font-weight: bold;
+  transition: box-shadow 0.5s ease;
   display: flex;
   justify-content: center;
   align-items: center;
+}
+button.primary:hover {
+  box-shadow: 0px 0px black;
 }
 button.primary a {
   display: block;
   width: 100%;
   height: 100%;
   padding: 10px 20px;
+}
+
+button.secondary {
+  background: transparent;
+  margin: 10px;
+  border: none;
+  outline: none;
+  font-weight: bold;
+  transition: all 0.5s ease;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+button.secondary a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  padding: 10px 20px;
+}
+button.secondary .buttArrow {
+  margin-left: 10px;
+}
+button.secondary:hover .buttArrow {
+  margin-left: 20px;
 }
 
 p {
@@ -55,6 +83,18 @@ ul li {
 a {
   color: #071108;
   text-decoration: none;
+}
+
+input {
+  padding: 12px 20px;
+  border: none;
+  border-radius: 20px;
+  outline: none;
+}
+
+picture img {
+  width: 100%;
+  height: 100%;
 }
 
 header {
@@ -95,27 +135,140 @@ main section {
 
 section#intro {
   display: flex;
-  flex-flow: row nowrap;
+  flex-flow: row wrap;
   justify-content: space-around;
   align-items: center;
   gap: 30px;
 }
+section#intro h1 {
+  font: bold 3em system-ui, sans-serif;
+}
+section#intro .introInfo {
+  width: 50%;
+}
+section#intro .introInfo div {
+  display: flex;
+  justify-content: flex-start;
+}
 section#intro div.imgDiv {
-  width: 100%;
+  width: 40%;
   height: 100%;
   border: 5px solid #071108;
   border-radius: 10px;
 }
 
+section#showcase {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+section#showcase .window {
+  width: 500px;
+  height: 300px;
+  position: relative;
+  background: white;
+  box-shadow: -15px 15px black;
+  margin: 20px;
+  border: 2px solid #071108;
+}
+section#showcase .window .bar {
+  height: 30px;
+  border-bottom: 1px solid #071108;
+}
+section#showcase .window .bar {
+  background: #5AD2F4;
+  height: 45px;
+  padding: 0px 20px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+section#showcase .window .content {
+  height: calc(100% - 45px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+section#showcase .window.big {
+  width: 700px;
+  height: 500px;
+}
+section#showcase .window.small1 {
+  position: absolute;
+  top: 65%;
+  left: -15%;
+}
+section#showcase .window.small1 .bar {
+  background: #F9C976;
+}
+section#showcase .window.small1 picture {
+  width: 40%;
+}
+section#showcase .window.small2 {
+  box-shadow: 15px 15px black;
+  position: absolute;
+  top: -15%;
+  left: 75%;
+}
+section#showcase .window.small2 .bar {
+  background: #7FB685;
+}
+section#showcase .window.small2 picture {
+  width: 40%;
+}
+section#showcase .window picture {
+  width: 50%;
+}
+section#showcase .window picture img {
+  border-radius: 20px;
+}
+section#showcase span {
+  font: 900 5em system-ui, sans-serif;
+}
+section#showcase span:nth-child(odd) {
+  position: absolute;
+  top: 0;
+  left: -10%;
+}
+section#showcase span:nth-child(even) {
+  text-align: right;
+  position: absolute;
+  right: -10%;
+  bottom: 5%;
+}
+section#showcase span:nth-child(2) {
+  color: transparent;
+  -webkit-text-stroke: 2px #071108;
+  z-index: 1;
+}
+section#showcase span:nth-child(3) {
+  color: transparent;
+  -webkit-text-stroke: 2px #071108;
+  z-index: 1;
+}
+
 section#about {
+  width: 85%;
   text-align: center;
 }
 section#about > div {
   display: flex;
-  flex-flow: row nowrap;
+  flex-flow: row wrap;
   justify-content: space-around;
   align-items: center;
   gap: 30px;
+}
+section#about > div div {
+  background: #F9C976;
+  width: 400px;
+  height: 400px;
+  border: 8px solid #071108;
+  border-radius: 50%;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 section#about > div h2 {
   font-weight: normal;
@@ -126,8 +279,8 @@ section#about > div h2 span {
   font: 900 3em sans-serif;
 }
 section#about h1 {
-  font-size: 3em;
-  margin: 40px 0px;
+  font: normal 3em sans-serif;
+  margin: 50px 0px 70px 0px;
 }
 
 section#pals {
@@ -137,32 +290,70 @@ section#pals {
   height: 600px;
   margin: 0;
   text-align: center;
+  position: relative;
   display: flex;
   flex-flow: column nowrap;
   justify-content: space-around;
   align-items: center;
+}
+section#pals .msg {
+  width: 400%;
   position: relative;
+  left: 0;
+  transition-property: left, background, color;
+  transition-duration: 0.5s;
+  transition-timing-function: ease;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-evenly;
+  align-items: center;
+  gap: 30px;
+  gap: 0;
+}
+section#pals .msg .palsInfo {
+  width: 100vw;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-around;
+  align-items: center;
 }
 section#pals > div {
+  width: 100vw;
   height: 70%;
   display: flex;
-  flex-flow: column nowrap;
-  justify-content: space-around;
+  flex-flow: row nowrap;
+  justify-content: space-evenly;
   align-items: center;
+  gap: 30px;
+}
+section#pals .arrowsNav {
+  position: absolute;
+  font-size: 3em;
+  cursor: pointer;
+  z-index: 1;
+}
+section#pals .arrowsNav:nth-child(1) {
+  left: 10%;
+}
+section#pals .arrowsNav:nth-child(2) {
+  left: 90%;
 }
 section#pals h1 {
-  font: 900 3em sans-serif;
+  font: 900 3.4em system-ui, sans-serif;
   color: #EF6F6C;
+  position: absolute;
+  top: 10%;
 }
 section#pals h2 {
   color: #EF6F6C;
-  font: 900 2em sans-serif;
+  font: 900 2em system-ui, sans-serif;
+  text-transform: uppercase;
 }
 section#pals h2 span {
-  font: normal 0.6em sans-serif;
+  font: normal 0.6em system-ui, sans-serif;
 }
 section#pals p {
-  width: 60%;
+  width: 50%;
 }
 section#pals .palsComp {
   background: #EF6F6C;
@@ -174,10 +365,24 @@ section#pals .palsComp {
   position: absolute;
   top: 90%;
 }
+section#pals .palsComp > div {
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+section#pals .palsComp > div picture,
+section#pals .palsComp > div img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
+section#services {
+  width: 83%;
+}
 section#services > div {
   display: flex;
-  flex-flow: row nowrap;
+  flex-flow: row wrap;
   justify-content: space-around;
   align-items: center;
   gap: 30px;
@@ -187,7 +392,7 @@ section#services .services {
   width: 400px;
   height: 600px;
   padding: 20px;
-  margin: 10px;
+  margin: 10px 0px;
   border: 3px solid black;
   border-radius: 20px;
   display: flex;
@@ -214,7 +419,7 @@ section#services h1 {
 section#reach {
   height: 900px;
   display: flex;
-  flex-flow: row nowrap;
+  flex-flow: row wrap;
   justify-content: space-around;
   align-items: center;
   gap: 30px;
@@ -234,15 +439,153 @@ section#reach .earth {
   border: 10px solid black;
   border-radius: 50%;
 }
+section#reach .earth .txt {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  animation: rot-txt 10s linear infinite;
+}
+section#reach .earth .txt span {
+  position: absolute;
+  top: -15%;
+  left: 50%;
+  transform-origin: 0 250px;
+  font-size: 1em;
+  font-weight: 900;
+}
+
+section#improve {
+  background: #5AD2F4;
+  width: 100%;
+  height: 1100px;
+  margin: 0px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+section#improve h1,
+section#improve h2 {
+  font: 900 3em system-ui, sans-serif;
+  text-align: center;
+}
+section#improve > div {
+  width: 70%;
+  height: 60%;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(1fr, 100%));
+  grid-template-rows: repeat(2, minmax(1fr, 100%));
+}
+section#improve > div div {
+  box-shadow: -10px 10px #071108;
+  padding: 20px;
+  border: 4px solid #071108;
+  border-radius: 20px;
+  margin: 20px;
+}
+section#improve > div > div:nth-child(1) {
+  background: #F9C976;
+  grid-row: 1/span 2;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-around;
+  align-items: center;
+}
+section#improve > div > div:nth-child(1) h1 {
+  font-size: 4em;
+  transform: rotate(-90deg);
+  width: 100%;
+}
+section#improve > div > div:nth-child(2) {
+  background: #EBBAB9;
+  grid-column: 2/span 3;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-around;
+  align-items: center;
+}
+section#improve > div > div:nth-child(2) button {
+  width: 100%;
+}
+section#improve > div > div:nth-child(3) {
+  background: #7FB685;
+}
+section#improve > div > div:nth-child(4) {
+  background: #F9C976;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(1fr, 100%));
+  grid-template-rows: repeat(2, minmax(1fr, 100%));
+}
+section#improve .waves:nth-child(1) {
+  position: absolute;
+  top: -19.5%;
+}
+section#improve .waves:nth-child(2) {
+  position: absolute;
+  top: 80.5%;
+  left: -10%;
+}
 
 footer {
   background: #071108;
   color: white;
   width: 100%;
-  height: 200px;
+  height: 500px;
+  padding: 30px;
   position: relative;
   bottom: 0;
   margin-top: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+footer > div {
+  width: 80%;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 30px;
+}
+footer > div div {
+  width: 300px;
+}
+footer .credit {
+  width: 90%;
+  border-top: 2px solid white;
+  font: bold 1em system-ui, sans-serif;
+  position: absolute;
+  bottom: 0;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 30px;
+}
+footer ul li {
+  display: block;
+  font-size: 1.2em;
+  margin: 20px;
+}
+footer a {
+  color: white;
+  font-weight: bold;
+}
+footer input {
+  border: 3px solid black;
+}
+footer input[type=text] {
+  width: calc(100% - 60px);
+  box-shadow: -5px 5px black;
+}
+footer input[type=submit] {
+  background: #EF6F6C;
+  width: 40px;
+  height: 40px;
+  margin-left: 10px;
+  border-radius: 50%;
+  line-height: 100%;
+  cursor: pointer;
 }
 
 /*# sourceMappingURL=index.css.map */

@@ -1,3 +1,8 @@
+// @font-face {
+//   font-family: "Inter";
+//   src: url("../../fonts/Inter-VariableFont_slnt\,wght.ttf");
+// }
+
 // Colors
 $primary: #EBBAB9;
 $secondary: #EF6F6C;
@@ -7,4 +12,4 @@ $fifth: #F9C976;
 $dark: #071108;
 
 // Fonts
-$mainFont: sans-serif;
+$mainFont: system-ui, sans-serif;
