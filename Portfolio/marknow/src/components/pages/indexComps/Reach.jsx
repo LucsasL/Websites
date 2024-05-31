@@ -1,4 +1,4 @@
-import earth from "../img/earth.png";
+import earth from "../../../img/earth.png";
 
 function rotateText() {
   const text = document.querySelector(".txt");

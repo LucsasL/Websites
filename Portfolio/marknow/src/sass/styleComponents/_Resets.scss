@@ -22,10 +22,6 @@ html, body {
   scroll-behavior: smooth;
 }
 
-#root {
-  @include center;
-}
-
 // Block Settings
 button.primary {
   @include primaryButton;

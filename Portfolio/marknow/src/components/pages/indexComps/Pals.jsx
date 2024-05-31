@@ -2,15 +2,15 @@
 import { useState } from "react";
 
 // Importing Data
-import { palsInfo, useEffect } from "../Utils/data";
+import { palsInfo } from "../../../Utils/data";
 
 // Importing Images
-import arrowPrev from "../icons/back-arrow.svg";
-import arrowNext from "../icons/front-arrow.svg";
-// import faceDuck from "../img/faceduck.png";
-import poogle from "../img/poogle.webp";
-import rabbit from "../img/rabbit.webp";
-import youDude from "../img/YouDude.png";
+import arrowPrev from "../../../icons/back-arrow.svg";
+import arrowNext from "../../../icons/front-arrow.svg";
+// import faceDuck from "../../../img/faceduck.png";
+import poogle from "../../../img/poogle.webp";
+import rabbit from "../../../img/rabbit.webp";
+import youDude from "../../../img/YouDude.png";
 
 const Pals = () => {
   const [position, setPosition] = useState(0);
@@ -21,13 +21,12 @@ const Pals = () => {
   const scrollMsg = (arr) => {
     if (arr === "Prev" && position < 0) {
       setPosition(position + 100);
-      
     } else if (arr === "Next" && position > -300) {
       setPosition(position - 100);
     }
 
     changeColor(position);
-  }
+  };
 
   const arrOpacity = () => {
     if (position === 0) {
@@ -41,7 +40,7 @@ const Pals = () => {
     } else {
       setNextArrOpacity(1);
     }
-  }
+  };
 
   const changeColor = (msg) => {
     switch (msg) {
@@ -64,8 +63,8 @@ const Pals = () => {
       default:
         return;
     }
-  }
- 
+  };
+
   return (
     <>
       <section id="pals">
@@ -146,6 +145,6 @@ const Pals = () => {
       </section>
     </>
   );
-}
+};
 
 export default Pals;

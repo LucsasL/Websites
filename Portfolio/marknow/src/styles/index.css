@@ -15,12 +15,6 @@ html, body {
   scroll-behavior: smooth;
 }
 
-#root {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
 button.primary {
   background: #EF6F6C;
   box-shadow: 0px 5px black;

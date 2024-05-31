@@ -1,6 +1,6 @@
-import coffee from "../img/coffee.jpg";
-import burger from "../img/burger.jpg";
-import shoes from "../img/shoes.jpg";
+import coffee from "../../../img/coffee.jpg";
+import burger from "../../../img/burger.jpg";
+import shoes from "../../../img/shoes.jpg";
 
 const Showcase = () => {
   return (

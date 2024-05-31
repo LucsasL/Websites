@@ -1,4 +1,4 @@
-import sectWaves from "../img/waves.svg";
+import sectWaves from "../../../img/waves.svg";
 
 const Improve = () => {
   return (

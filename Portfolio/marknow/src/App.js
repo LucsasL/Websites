@@ -1,19 +1,31 @@
+// Hooks Import
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 // import { useContext } from "react";
 
-import "./styles/index.css";
+// Pages Import
 import Header from "./components/Header";
-import MainCont from "./components/MainCont";
 import Footer from "./components/Footer";
+
+import Home from "./components/pages/home";
+import About from "./components/pages/about";
+import Contact from "./components/pages/contact";
+
+// Styles and animations
+// import "./styles/index.css";
 // import "./animation";
 
 function App() {
   return (
     <>
-      <div>
+      <Router>
         <Header />
-        <MainCont />
+        <Routes>
+          <Route exact path="/" element={<Home />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/contact" element={<Contact />} />
+        </Routes>
         <Footer />
-      </div>
+      </Router>
     </>
   );
 }
