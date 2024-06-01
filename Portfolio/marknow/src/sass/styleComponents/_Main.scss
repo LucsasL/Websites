@@ -474,15 +474,7 @@ section#improve {
   }
 
   .waves {
-    &:nth-child(1) {
-      position: absolute;
-      top: -19.5%;
-    }
-
-    &:nth-child(2) {
-      position: absolute;
-      top: 80.5%;
-      left: -10%;
-    }
+    position: absolute;
+    top: -19.5%;
   }
 }

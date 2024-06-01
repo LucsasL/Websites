@@ -1,8 +1,8 @@
 function IntroSectAbout() {
   return (
     <>
-      <section id="intro">
-        <div class="cont center">
+      <section id="introAbout">
+        <div>
           <div>
             <h1 class="bolder giant">WE ARE MARKDOWN</h1>
 

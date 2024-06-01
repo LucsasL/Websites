@@ -31,6 +31,14 @@ button.secondary {
   @include secondaryButton;
 }
 
+fieldset {
+  border: none;
+
+  legend {
+    display: none;
+  }
+}
+
 // Text Settings
 p {
   margin: 16px 0px;
@@ -51,7 +59,7 @@ a {
   text-decoration: none;
 }
 
-input {
+input, textarea {
   padding: 12px 20px;
   border: none;
   border-radius: 20px;

@@ -2,12 +2,12 @@ function Cases() {
   return (
     <>
       <section id="cases">
-        <div class="cont">
-          <h1 class="bolder title center">CASE STUDY</h1>
+        <div>
+          <h1 className="bolder title center">CASE STUDY</h1>
 
-          <div class="two-columns">
+          <div className="case">
             <div>
-              <h2 class="title">Poodle Case</h2>
+              <h2 className="title">Poodle Case</h2>
 
               <p>
                 Lorem ipsum dolor, sit amet consectetur adipisicing elit.
@@ -18,15 +18,15 @@ function Cases() {
             </div>
 
             <div>
-              <div class="window">
-                <div class="bar-window"></div>
+              <div className="window">
+                <div className="bar-window"></div>
               </div>
             </div>
           </div>
 
-          <div class="two-columns" style={{ display: "flex", order: "2" }}>
+          <div className="case" style={{ display: "flex", order: "2" }}>
             <div style={{ order: "2" }}>
-              <h2 class="title">Poodle Case</h2>
+              <h2 className="title">Poodle Case</h2>
 
               <p>
                 Lorem ipsum dolor, sit amet consectetur adipisicing elit.
@@ -37,8 +37,8 @@ function Cases() {
             </div>
 
             <div>
-              <div class="window" style={{ boxShadow: "-10px 10px black" }}>
-                <div class="bar-window"></div>
+              <div className="window">
+                <div className="bar-window"></div>
               </div>
             </div>
           </div>

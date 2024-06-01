@@ -1,0 +1,33 @@
+section#form {
+  margin-bottom: 300px;
+
+  > div {
+    background: white;
+    box-shadow: -15px 15px 0px $dark;
+  
+    padding: 20px;
+    border: 7px solid $dark;
+    border-radius: 20px;
+
+    div {
+      padding: 10px;
+    }
+  }
+
+  input[type="text"],
+  input[type="email"],
+  textarea {
+    width: 100%;
+    border: 2px solid $dark;
+  }
+
+  input[type="submit"] {
+    @include primaryButton;
+  }
+
+  label {
+    display: inline-block;
+    padding-bottom: 15px;
+    font: bold 1em $mainFont;
+  }
+}

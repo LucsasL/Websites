@@ -5,7 +5,6 @@ const Improve = () => {
     <>
       <section id="improve">
         <img src={sectWaves} alt="Waves" className="waves" />
-        <img src={sectWaves} alt="Waves" className="waves" />
 
         <div className="grid">
           <div>

@@ -1,0 +1,169 @@
+// Intro Section
+section#introAbout {
+  text-align: center;
+
+  h1 {
+    font: 900 5em $mainFont;
+  }
+
+  p {
+    width: 100%;
+  }
+}
+
+// Cases Section
+section#cases {
+  width: 100%;
+
+  > div {
+    width: 100%;
+  }
+
+  .case {
+    @include spaceAround;
+
+    div {
+      width: 40%;
+      height: 300px;
+    }
+
+    .window {
+      background: white;
+      width: 50%;
+      height: 100%;
+
+      @include windowBox;
+    }
+  }
+
+  h1 {
+    text-align: center;
+    font: bold 3em $mainFont;
+    margin-bottom: 50px;
+  }
+
+  h2 {
+    font: normal 2.6em $mainFont;
+  }
+
+  button {
+    @include primaryButton;
+  }
+}
+
+// Top Section
+section#top {
+  background: $dark;
+  color: white;
+
+  width: 100%;
+  height: 700px;
+  padding: 30px 0px;
+
+  > div {
+    width: 100%;
+    height: 100%;
+
+    @include verticalFlex;
+  }
+
+  .profInfo {
+    width: 100%;
+
+    @include spaceAround;
+
+    div {
+      width: 40%;
+      height: 400px;
+    }
+
+    .profDesc {
+      @include verticalFlex;
+      
+      .buttonDiv {
+        width: 100%;
+
+        @include center;
+      }
+    }
+    
+    .imgProf {
+      width: 50%;
+
+      @include center;
+    }
+
+    button {
+      cursor: pointer;
+    }
+  }
+
+  h1 {
+    text-align: center;
+    font: 900 3em $mainFont;
+    color: $secondary;
+  }
+
+  button {
+    width: 100px;
+    height: 100px;
+    margin: 0px 10px;
+    border: none;
+    outline: none;
+    
+    &:nth-child(1) {
+      background: $secondary;
+      border-radius: 50%;
+    }
+    
+    &:nth-child(2) {
+      background: $third;
+      border-radius: 3px;
+    }
+    
+    &:nth-child(3) {
+      background: $fourth;
+      clip-path: polygon(50% 0, 100% 50%, 50% 100%, 0 50%);
+    }
+    
+    &:nth-child(4) {
+      background: $fifth;
+      clip-path: polygon(50% 0%, 100% 38%, 82% 100%, 18% 100%, 0% 38%);
+    }
+  }
+
+  picture {
+    width: 500px;
+    height: 500px;
+    border: 5px solid $secondary;
+    border-radius: 50%;
+
+    display: block;
+  }
+}
+
+
+// Join Section
+section#join {
+  margin-bottom: 350px;
+  text-align: center;
+
+  h1 {
+    font: bold 3em $mainFont;
+  }
+
+  p {
+    text-align: center;
+    width: 55%;
+    margin: 25px 0px;
+  }
+
+  > div div {
+    @include center;
+    
+    button {
+      width: 50%;
+      @include primaryButton;
+    }
+  }
+}

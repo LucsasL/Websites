@@ -1,4 +1,10 @@
+import { useState } from "react";
+
 function Contact() {
+  const [nameInput, setNameInput] = useState("");
+  const [emailInput, setEmailInput] = useState("");
+  const [msgInput, setMsgInput] = useState("");
+
   return (
     <main>
       <div>
@@ -10,19 +16,49 @@ function Contact() {
                   Your contact information
                 </legend>
                 <div>
-                  <label for="name">Name: </label> <br />
-                    <input type="text" id="name" required placeholder="Your name" />
+                  <label htmlFor="name">Name: </label> <br />
+                    <input 
+                      type="text"
+                      id="name"
+                      placeholder="Your name"
+                      value={nameInput}
+                      onChange={(e) => setNameInput(e.target.value)}
+                      minLength={8}
+                      required
+                    />
                 </div>
+                
                 <div>
-                  <label for="email">Email: </label> <br />
-                    <input type="email" id="email" placeholder="Your email" required />
+                  <label htmlFor="email">Email: </label> <br />
+                    <input 
+                      type="email"
+                      id="email"
+                      placeholder="Your email"
+                      value={emailInput}
+                      onChange={(e) => setEmailInput(e.target.value)}
+                      required
+                    />
                 </div>
+
                 <div>
-                  <label for="msg">Message: </label> <br />
-                    <textarea id="msg" cols="30" rows="10" required placeholder="Send us a message..."></textarea>
+                  <label htmlFor="msg">Message: </label> <br />
+                    <textarea 
+                        id="msg" 
+                        cols="30" 
+                        rows="10" 
+                        placeholder="Send us a message..."
+                        value={msgInput}
+                        onChange={(e) => setMsgInput(e.target.value)}
+                        required 
+                    ></textarea>
                 </div>
+
                 <div>
-                  <input type="submit" value="Let's make profit" class="prim-button" />
+                  <input 
+                    type="submit"
+                    value="Let's make profit"
+                    className="prim-button"
+                  />
                 </div>
               </fieldset>
             </form>

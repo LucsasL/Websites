@@ -1,29 +1,28 @@
-// import { FaArrowRight } from "react-icons/fa";
+import sectWaves from "../img/waves.svg";
 import { useState } from "react";
 
 const Footer = () => {
   const [newsletterEmail, setNewsletterEmail] = useState("");
-
+  
   return (
     <>
       <footer>
+        <img src={sectWaves} alt="Waves" className="waves" />
+        
         <div>
           <div>
             <h1>This is MARKDOWN</h1>
 
             <p>SIGN TO OUR NEWSLETTER:</p>
 
-            <input 
-              type="text" 
-              id="inp" 
+            <input
+              type="text"
+              id="inp"
               placeholder="Enter your email..."
               value={newsletterEmail}
               onChange={(e) => setNewsletterEmail(e.target.value)}
             />
-            <input
-              type="submit"
-              value="→"
-              />
+            <input type="submit" value="→" />
           </div>
 
           <div>
@@ -71,6 +70,6 @@ const Footer = () => {
       </footer>
     </>
   );
-}
+};
 
 export default Footer;
