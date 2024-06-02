@@ -1,5 +1,7 @@
-// Importing States
+// Importing Hooks
 import { useState } from "react";
+import { useGSAP } from "@gsap/react";
+import gsap from "gsap";
 
 // Importing Data
 import { palsInfo } from "../../../Utils/data";
@@ -17,6 +19,23 @@ const Pals = () => {
   const [color, setColor] = useState("#EF6F6C");
   const [prevArrOpacity, setPrevArrOpacity] = useState(1);
   const [nextArrOpacity, setNextArrOpacity] = useState(1);
+
+
+  const prevArrow = document.querySelector(".PrArrow");
+  const nextArrow = document.querySelector(".NeArrow");
+
+  useGSAP(() => {
+    const animationPrev = gsap.to(".PrArrow", {
+      x: -5,
+    });
+
+    const animationNext = gsap.to(".NeArrow", {
+      x: 5,
+    });
+
+    prevArrow.addEventListener("mouseover", () => animationPrev.play());
+    nextArrow.addEventListener("mouseover", () => animationNext.play());
+  });
 
   const scrollMsg = (arr) => {
     if (arr === "Prev" && position < 0) {
