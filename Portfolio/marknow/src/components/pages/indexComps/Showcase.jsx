@@ -1,8 +1,32 @@
+// Importing Hooks
+import { useGSAP } from "@gsap/react";
+import gsap from "gsap";
+
 import coffee from "../../../img/coffee.jpg";
 import burger from "../../../img/burger.jpg";
 import shoes from "../../../img/shoes.jpg";
 
 const Showcase = () => {
+  useGSAP(() => {
+    gsap.fromTo("span:nth-child(odd)",
+    {
+      x: -100
+    },
+    {
+      x: 100,
+    });
+
+    gsap.fromTo(
+      "span:nth-child(even)",
+      {
+        x: 100,
+      },
+      {
+        x: -100,
+      }
+    );
+  });
+
   return (
     <>
       <section id="showcase">
@@ -60,4 +84,4 @@ const Showcase = () => {
   );
 }
 
-export default Showcase
+export default Showcase;

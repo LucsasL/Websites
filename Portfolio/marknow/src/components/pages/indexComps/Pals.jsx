@@ -20,31 +20,51 @@ const Pals = () => {
   const [prevArrOpacity, setPrevArrOpacity] = useState(1);
   const [nextArrOpacity, setNextArrOpacity] = useState(1);
 
-
-  const prevArrow = document.querySelector(".PrArrow");
-  const nextArrow = document.querySelector(".NeArrow");
-
   useGSAP(() => {
-    const animationPrev = gsap.to(".PrArrow", {
+    gsap.to(".PrArrow", {
       x: -5,
     });
 
-    const animationNext = gsap.to(".NeArrow", {
+    gsap.to(".NeArrow", {
       x: 5,
     });
-
-    prevArrow.addEventListener("mouseover", () => animationPrev.play());
-    nextArrow.addEventListener("mouseover", () => animationNext.play());
   });
 
   const scrollMsg = (arr) => {
+    switch (position) {
+      case 0:
+        setColor("#5AD2F4");
+        break;
+
+      case -100 && arr === "Prev":
+        setColor("#EF6F6C");
+        break;
+        
+      case -100 && arr === "Next":
+        setColor("#7FB685");
+        break;
+        
+        case -200 && arr === "Prev":
+          setColor("#F9C976");
+          break;
+
+        case -200 && arr === "Next":
+          setColor("#F9C976");
+          break;
+
+      case -300:
+        setColor("#7FB685");
+        break;
+
+      default:
+        break;
+    }
+
     if (arr === "Prev" && position < 0) {
       setPosition(position + 100);
     } else if (arr === "Next" && position > -300) {
       setPosition(position - 100);
     }
-
-    changeColor(position);
   };
 
   const arrOpacity = () => {
@@ -58,29 +78,6 @@ const Pals = () => {
       setNextArrOpacity(0.3);
     } else {
       setNextArrOpacity(1);
-    }
-  };
-
-  const changeColor = (msg) => {
-    switch (msg) {
-      case 0:
-        setColor("#EF6F6C");
-        return;
-
-      case -100:
-        setColor("#5AD2F4");
-        return;
-
-      case -200:
-        setColor("#7FB685");
-        return;
-
-      case -300:
-        setColor("#F9C976");
-        return;
-
-      default:
-        return;
     }
   };
 
