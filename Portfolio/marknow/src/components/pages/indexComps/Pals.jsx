@@ -44,9 +44,9 @@ const Pals = () => {
         setColor("#7FB685");
         break;
         
-        case -200 && arr === "Prev":
-          setColor("#F9C976");
-          break;
+      case -200 && arr === "Prev":
+        setColor("#F9C976");
+        break;
 
         case -200 && arr === "Next":
           setColor("#F9C976");
