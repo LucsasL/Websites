@@ -1,18 +1,908 @@
-/* Error: Undefined mixin.
- *    ,
- * 52 |     @include window;
- *    |     ^^^^^^^^^^^^^^^
- *    '
- *   styleComponents\_Main.scss 52:5  @import
- *   index.scss 12:9                  root stylesheet */
-
-body::before {
-  font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
-      "Droid Sans Mono", monospace, monospace;
-  white-space: pre;
-  display: block;
-  padding: 1em;
-  margin-bottom: 1em;
-  border-bottom: 2px solid black;
-  content: "Error: Undefined mixin.\a    \2577 \a 52 \2502      @include window;\d\a    \2502      ^^^^^^^^^^^^^^^\a    \2575 \a   styleComponents\\_Main.scss 52:5  @import\a   index.scss 12:9                  root stylesheet";
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 }
+
+html, body {
+  background: #EBBAB9;
+  color: #071108;
+  width: 100%;
+  max-width: 100%;
+  height: 100%;
+  scroll-behavior: smooth;
+}
+
+button.primary {
+  background: #EF6F6C;
+  box-shadow: 0px 5px black;
+  margin: 10px;
+  border: 2px solid #071108;
+  border-radius: 10px;
+  outline: none;
+  font-weight: bold;
+  cursor: pointer;
+  transition: box-shadow 0.5s ease;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+button.primary:hover {
+  box-shadow: 0px 0px black;
+}
+button.primary a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  padding: 12px 20px;
+}
+
+button.secondary {
+  background: transparent;
+  margin: 10px;
+  border: none;
+  outline: none;
+  font-weight: bold;
+  transition: all 0.5s ease;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+button.secondary a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  padding: 10px 20px;
+}
+button.secondary .buttArrow {
+  margin-left: 10px;
+}
+button.secondary:hover .buttArrow {
+  margin-left: 20px;
+}
+
+fieldset {
+  border: none;
+}
+fieldset legend {
+  display: none;
+}
+
+p {
+  margin: 16px 0px;
+  font-size: 1.2em;
+  line-height: 2em;
+}
+
+ul li {
+  list-style: none;
+  display: inline-block;
+  margin: 10px;
+}
+
+a {
+  color: #071108;
+  text-decoration: none;
+}
+
+input, textarea {
+  padding: 12px 20px;
+  border: none;
+  border-radius: 20px;
+  outline: none;
+}
+
+picture img {
+  width: 100%;
+  height: 100%;
+}
+
+figcaption {
+  display: none;
+}
+
+header {
+  background: #5AD2F4;
+  width: 100%;
+  height: 85px;
+  border-bottom: 2px solid #071108;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+header > div {
+  width: 80%;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 30px;
+}
+header h1 {
+  font: 900 1.7em "Inter", sans-serif;
+}
+
+main {
+  width: 100%;
+}
+main > div {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-around;
+  align-items: center;
+  justify-content: none;
+}
+main section {
+  width: 80%;
+  margin: 100px 0px;
+}
+
+section#intro {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-around;
+  align-items: center;
+  gap: 30px;
+}
+section#intro h1 {
+  font: bold 3em "Inter", sans-serif;
+}
+section#intro .introInfo {
+  width: 50%;
+}
+section#intro .introInfo div {
+  display: flex;
+  justify-content: flex-start;
+}
+section#intro div.imgDiv {
+  width: 40%;
+  height: 100%;
+  border: 5px solid #071108;
+  border-radius: 10px;
+}
+
+section#showcase {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+section#showcase .window {
+  width: 500px;
+  height: 300px;
+  position: relative;
+  background: white;
+  box-shadow: -15px 15px black;
+  margin: 20px;
+  border: 2px solid #071108;
+}
+section#showcase .window .bar {
+  height: 30px;
+  border-bottom: 1px solid #071108;
+}
+section#showcase .window .bar {
+  background: #5AD2F4;
+  height: 45px;
+  padding: 0px 20px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+section#showcase .window .content {
+  height: calc(100% - 45px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+section#showcase .window.big {
+  width: 700px;
+  height: 500px;
+}
+section#showcase .window.small1 {
+  position: absolute;
+  top: 65%;
+  left: -15%;
+}
+section#showcase .window.small1 .bar {
+  background: #F9C976;
+}
+section#showcase .window.small1 picture {
+  width: 40%;
+}
+section#showcase .window.small2 {
+  box-shadow: 15px 15px black;
+  position: absolute;
+  top: -15%;
+  left: 75%;
+}
+section#showcase .window.small2 .bar {
+  background: #7FB685;
+}
+section#showcase .window.small2 picture {
+  width: 40%;
+}
+section#showcase .window picture {
+  width: 50%;
+}
+section#showcase .window picture img {
+  border-radius: 20px;
+}
+section#showcase span {
+  font: 900 5em "Inter", sans-serif;
+}
+section#showcase span:nth-child(odd) {
+  position: absolute;
+  top: 0;
+  left: -10%;
+}
+section#showcase span:nth-child(even) {
+  text-align: right;
+  position: absolute;
+  right: -10%;
+  bottom: 5%;
+}
+section#showcase span:nth-child(2) {
+  color: transparent;
+  -webkit-text-stroke: 2px #071108;
+  z-index: 1;
+}
+section#showcase span:nth-child(3) {
+  color: transparent;
+  -webkit-text-stroke: 2px #071108;
+  z-index: 1;
+}
+
+section#about {
+  width: 85%;
+  text-align: center;
+}
+section#about > div {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-around;
+  align-items: center;
+  gap: 30px;
+}
+section#about > div div {
+  width: 400px;
+  height: 400px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+section#about > div div:nth-child(1) {
+  background: #EF6F6C;
+  border: 5px solid #071108;
+  border-radius: 50%;
+}
+section#about > div div:nth-child(2) {
+  background: #5AD2F4;
+  border: 5px solid #071108;
+  border-radius: 20px;
+}
+section#about > div div:nth-child(3) {
+  background: #071108;
+  clip-path: polygon(50% 0%, 100% 38%, 82% 100%, 18% 100%, 0% 38%);
+}
+section#about > div div:nth-child(3)::before {
+  content: "";
+  background: #7FB685;
+  width: 390px;
+  height: 390px;
+  position: absolute;
+  z-index: -1;
+  clip-path: polygon(50% 0%, 100% 38%, 82% 100%, 18% 100%, 0% 38%);
+}
+section#about > div h2 {
+  font-weight: normal;
+  font-size: 2em;
+  margin: 0px;
+}
+section#about > div h2 span {
+  font: 900 3em sans-serif;
+}
+section#about h1 {
+  font: normal 3em sans-serif;
+  margin: 50px 0px 70px 0px;
+}
+
+section#pals {
+  background: #071108;
+  color: white;
+  width: 100%;
+  height: 600px;
+  margin: 0;
+  text-align: center;
+  position: relative;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-around;
+  align-items: center;
+}
+section#pals .msg {
+  width: 400%;
+  position: relative;
+  left: 0;
+  transition-property: left, background, color;
+  transition-duration: 0.5s;
+  transition-timing-function: ease;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-evenly;
+  align-items: center;
+  gap: 30px;
+  gap: 0;
+}
+section#pals .msg .palsInfo {
+  width: 100vw;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-around;
+  align-items: center;
+}
+section#pals > div {
+  width: 100vw;
+  height: 70%;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-evenly;
+  align-items: center;
+  gap: 30px;
+}
+section#pals .arrowsNav {
+  position: absolute;
+  font-size: 3em;
+  cursor: pointer;
+  z-index: 1;
+}
+section#pals .arrowsNav:nth-child(1) {
+  left: 10%;
+}
+section#pals .arrowsNav:nth-child(2) {
+  left: 90%;
+}
+section#pals h1 {
+  font: 900 3.4em "Inter", sans-serif;
+  color: #EF6F6C;
+  position: absolute;
+  top: 10%;
+}
+section#pals h2 {
+  color: #EF6F6C;
+  font: 900 2em "Inter", sans-serif;
+  text-transform: uppercase;
+}
+section#pals h2 span {
+  font: normal 0.6em "Inter", sans-serif;
+}
+section#pals p {
+  width: 50%;
+}
+section#pals .palsComp {
+  background: #EF6F6C;
+  box-shadow: 0px 10px black;
+  width: 80%;
+  height: 100px;
+  border: 3px solid black;
+  border-radius: 20px;
+  position: absolute;
+  top: 90%;
+}
+section#pals .palsComp > div {
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+section#pals .palsComp > div picture,
+section#pals .palsComp > div img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+section#services {
+  width: 83%;
+}
+section#services > div {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-around;
+  align-items: center;
+  gap: 30px;
+}
+section#services .services {
+  box-shadow: -10px 10px black;
+  width: 400px;
+  height: 600px;
+  padding: 20px;
+  margin: 10px 0px;
+  border: 3px solid black;
+  border-radius: 20px;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-around;
+  align-items: center;
+}
+section#services .services button {
+  border-radius: 20px;
+  width: 90%;
+}
+section#services .services:nth-child(2) .primary {
+  background: #5AD2F4;
+}
+section#services .services:nth-child(3) .primary {
+  background: #7FB685;
+}
+section#services h1 {
+  font: 900 3em sans-serif;
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+section#reach {
+  height: 900px;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-around;
+  align-items: center;
+  gap: 30px;
+}
+section#reach .ceo {
+  background: white;
+  width: 500px;
+  height: 150px;
+  border: 5px solid black;
+  border-radius: 20px;
+  transform: perspective(10px) rotateX(1deg);
+}
+section#reach .earth {
+  background: #5AD2F4;
+  width: 400px;
+  height: 400px;
+  border: 10px solid black;
+  border-radius: 50%;
+}
+section#reach .earth .txt {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  animation: rot-txt 10s linear infinite;
+}
+section#reach .earth .txt span {
+  position: absolute;
+  top: -15%;
+  left: 50%;
+  transform-origin: 0 250px;
+  font-size: 1em;
+  font-weight: 900;
+}
+
+section#improve {
+  background: #5AD2F4;
+  width: 100%;
+  height: 1100px;
+  margin: 0px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+section#improve h1,
+section#improve h2 {
+  font: 900 3em "Inter", sans-serif;
+  text-align: center;
+}
+section#improve > div {
+  width: 70%;
+  height: 60%;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(1fr, 100%));
+  grid-template-rows: repeat(2, minmax(1fr, 100%));
+}
+section#improve > div div {
+  box-shadow: -10px 10px #071108;
+  padding: 20px;
+  border: 4px solid #071108;
+  border-radius: 20px;
+  margin: 20px;
+}
+section#improve > div > div:nth-child(1) {
+  background: #F9C976;
+  grid-row: 1/span 2;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-around;
+  align-items: center;
+}
+section#improve > div > div:nth-child(1) h1 {
+  font-size: 4em;
+  transform: rotate(-90deg);
+  width: 100%;
+}
+section#improve > div > div:nth-child(2) {
+  background: #EBBAB9;
+  grid-column: 2/span 3;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-around;
+  align-items: center;
+}
+section#improve > div > div:nth-child(2) button {
+  width: 100%;
+}
+section#improve > div > div:nth-child(3) {
+  background: #7FB685;
+}
+section#improve > div > div:nth-child(4) {
+  background: #F9C976;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(1fr, 100%));
+  grid-template-rows: repeat(2, minmax(1fr, 100%));
+}
+section#improve .waves {
+  position: absolute;
+  top: -19.5%;
+}
+
+footer {
+  background: #071108;
+  color: white;
+  width: 100%;
+  height: 420px;
+  padding: 30px;
+  position: relative;
+  bottom: 0;
+  margin-top: auto;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-between;
+  align-items: center;
+}
+footer > div {
+  width: 80%;
+  z-index: 1;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 30px;
+}
+footer > div div {
+  width: 300px;
+  height: 100%;
+}
+footer .credit {
+  width: 90%;
+  border-top: 2px solid white;
+  font: bold 1em "Inter", sans-serif;
+  position: absolute;
+  bottom: 0;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 30px;
+}
+footer ul li {
+  display: block;
+  font-size: 1.2em;
+  margin: 20px;
+}
+footer a {
+  color: white;
+  font-weight: bold;
+}
+footer input {
+  border: 3px solid black;
+}
+footer input[type=text] {
+  width: calc(100% - 60px);
+  box-shadow: -5px 5px black;
+}
+footer input[type=submit] {
+  background: #EF6F6C;
+  width: 40px;
+  height: 40px;
+  margin-left: 10px;
+  border-radius: 50%;
+  line-height: 100%;
+  cursor: pointer;
+}
+footer .waves {
+  position: absolute;
+  top: -51%;
+}
+
+section#introAbout {
+  background: url("../videos/marknowVideo.gif") no-repeat;
+  background-size: cover;
+  filter: brightness(0.4);
+  color: white;
+  width: 100%;
+  height: calc(100vh - 85px);
+  margin: 0;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+section#introAbout > div {
+  width: 65%;
+}
+section#introAbout h1 {
+  font: 900 5em "Inter", sans-serif;
+}
+section#introAbout p {
+  width: 100%;
+}
+
+section#cases {
+  width: 90%;
+}
+section#cases > div {
+  width: 100%;
+}
+section#cases .case {
+  height: 500px;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-around;
+  align-items: center;
+  gap: 30px;
+}
+section#cases .case div {
+  width: 40%;
+}
+section#cases .case .window {
+  background: white;
+  width: 100%;
+  height: 350px;
+  position: relative;
+  background: white;
+  box-shadow: -15px 15px black;
+  margin: 20px;
+  border: 2px solid #071108;
+}
+section#cases .case .window .bar {
+  height: 30px;
+  border-bottom: 1px solid #071108;
+}
+section#cases .case .window div {
+  width: 100%;
+  height: calc(100% - 40px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+section#cases .case .window .bar {
+  background: #5AD2F4;
+  width: 100%;
+  height: 40px;
+}
+section#cases h1 {
+  text-align: center;
+  font: bold 3em "Inter", sans-serif;
+  margin-bottom: 50px;
+}
+section#cases h2 {
+  font: normal 2.6em "Inter", sans-serif;
+}
+section#cases button {
+  background: #EF6F6C;
+  box-shadow: 0px 5px black;
+  margin: 10px;
+  border: 2px solid #071108;
+  border-radius: 10px;
+  outline: none;
+  font-weight: bold;
+  cursor: pointer;
+  transition: box-shadow 0.5s ease;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+section#cases button:hover {
+  box-shadow: 0px 0px black;
+}
+section#cases button a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  padding: 12px 20px;
+}
+
+section#top {
+  background: #071108;
+  color: white;
+  width: 100%;
+  padding: 30px 0px;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+section#top > div {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-around;
+  align-items: center;
+}
+section#top .profCont {
+  width: 400vw;
+  position: relative;
+  left: 0;
+}
+section#top .profInfo {
+  width: 100vw;
+  height: 600px;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-around;
+  align-items: center;
+  gap: 30px;
+}
+section#top .profInfo div {
+  width: 50%;
+  height: 400px;
+}
+section#top .profInfo .profDesc {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-around;
+  align-items: center;
+}
+section#top .profInfo .profDesc .buttonDiv {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+section#top .profInfo .imgProf {
+  background: url("../img/big-professional-round.jpg") no-repeat center;
+  background-size: cover;
+  width: 550px;
+  height: 550px;
+  border: 15px solid #EF6F6C;
+  border-radius: 50%;
+}
+section#top .profInfo button {
+  cursor: pointer;
+}
+section#top .arrowsNav {
+  position: absolute;
+  font-size: 3em;
+  cursor: pointer;
+  z-index: 1;
+}
+section#top .arrowsNav:nth-child(1) {
+  left: 5%;
+}
+section#top .arrowsNav:nth-child(2) {
+  left: 95%;
+}
+section#top h1 {
+  text-align: center;
+  font: 900 3em "Inter", sans-serif;
+  color: #EF6F6C;
+}
+section#top button {
+  width: 100px;
+  height: 100px;
+  margin: 0px 10px;
+  border: none;
+  outline: none;
+}
+section#top button:nth-child(1) {
+  background: #EF6F6C;
+  border-radius: 50%;
+}
+section#top button:nth-child(2) {
+  background: #5AD2F4;
+  border-radius: 3px;
+}
+section#top button:nth-child(3) {
+  background: #7FB685;
+  clip-path: polygon(50% 0, 100% 50%, 50% 100%, 0 50%);
+}
+section#top button:nth-child(4) {
+  background: #F9C976;
+  clip-path: polygon(50% 0%, 100% 38%, 82% 100%, 18% 100%, 0% 38%);
+}
+
+section#join {
+  margin-bottom: 350px;
+  text-align: center;
+}
+section#join h1 {
+  font: bold 3em "Inter", sans-serif;
+}
+section#join p {
+  text-align: center;
+  width: 55%;
+  margin: 25px 0px;
+}
+section#join > div div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+section#join > div div button {
+  width: 50%;
+  background: #EF6F6C;
+  box-shadow: 0px 5px black;
+  margin: 10px;
+  border: 2px solid #071108;
+  border-radius: 10px;
+  outline: none;
+  font-weight: bold;
+  cursor: pointer;
+  transition: box-shadow 0.5s ease;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+section#join > div div button:hover {
+  box-shadow: 0px 0px black;
+}
+section#join > div div button a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  padding: 12px 20px;
+}
+
+section#form {
+  margin-bottom: 300px;
+}
+section#form > div {
+  background: white;
+  box-shadow: -15px 15px 0px #071108;
+  padding: 20px;
+  border: 7px solid #071108;
+  border-radius: 20px;
+}
+section#form > div div {
+  padding: 10px;
+}
+section#form input[type=text],
+section#form input[type=email],
+section#form textarea {
+  width: 100%;
+  border: 2px solid #071108;
+}
+section#form input[type=submit] {
+  background: #EF6F6C;
+  box-shadow: 0px 5px black;
+  margin: 10px;
+  border: 2px solid #071108;
+  border-radius: 10px;
+  outline: none;
+  font-weight: bold;
+  cursor: pointer;
+  transition: box-shadow 0.5s ease;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+section#form input[type=submit]:hover {
+  box-shadow: 0px 0px black;
+}
+section#form input[type=submit] a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  padding: 12px 20px;
+}
+section#form label {
+  display: inline-block;
+  padding-bottom: 15px;
+  font: bold 1em "Inter", sans-serif;
+}
+
+/*# sourceMappingURL=index.css.map */

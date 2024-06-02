@@ -4,7 +4,7 @@ function IntroSectAbout() {
       <section id="introAbout">
         <div>
           <div>
-            <h1 class="bolder giant">WE ARE MARKDOWN</h1>
+            <h1>WE ARE MARKDOWN</h1>
 
             <p>
               Lorem ipsum dolor sit, amet consectetur adipisicing elit. Est

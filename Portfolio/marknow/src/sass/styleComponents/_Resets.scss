@@ -18,7 +18,7 @@ html, body {
   max-width: 100%;
   height: 100%;
 
-  overflow-x: clip;
+  // overflow-x: clip;
   scroll-behavior: smooth;
 }
 
@@ -70,4 +70,8 @@ input, textarea {
 picture img {
   width: 100%;
   height: 100%;
+}
+
+figcaption {
+  display: none;
 }

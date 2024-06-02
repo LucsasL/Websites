@@ -15,7 +15,7 @@
 
 @mixin spaceAround {
   display: flex;
-  flex-flow: row wrap;
+  flex-flow: row nowrap;
   justify-content: space-around;
   align-items: center;
   gap: 30px;
@@ -103,7 +103,7 @@
 }
 
 // Container Elements
-@mixin windowBox {
+@mixin window {
   background: white;
   box-shadow: -15px 15px black;
   
