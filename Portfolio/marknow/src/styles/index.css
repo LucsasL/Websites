@@ -13,6 +13,7 @@ html, body {
   width: 100%;
   max-width: 100%;
   height: 100%;
+  overflow-x: clip;
   scroll-behavior: smooth;
 }
 
@@ -620,7 +621,7 @@ footer .waves {
 section#introAbout {
   background: url("../videos/marknowVideo.gif") no-repeat;
   background-size: cover;
-  filter: brightness(0.4);
+  backdrop-filter: brightness(0.4);
   color: white;
   width: 100%;
   height: calc(100vh - 85px);
@@ -721,12 +722,8 @@ section#top {
   width: 100%;
   padding: 30px 0px;
   margin: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 section#top > div {
-  width: 100%;
   height: 100%;
   display: flex;
   flex-flow: column nowrap;
@@ -734,12 +731,19 @@ section#top > div {
   align-items: center;
 }
 section#top .profCont {
-  width: 400vw;
+  width: 400%;
   position: relative;
-  left: 0;
+  left: 150%;
+  transition: opacity 0.5s ease;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-evenly;
+  align-items: center;
+  gap: 30px;
+  gap: 0;
 }
 section#top .profInfo {
-  width: 100vw;
+  width: 90%;
   height: 600px;
   display: flex;
   flex-flow: row nowrap;

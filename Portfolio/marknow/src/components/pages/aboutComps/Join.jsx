@@ -15,7 +15,7 @@ function Join() {
           </div>
 
           <div>
-            <button class="prim-button">
+            <button>
               <a href="https://youtube.com">COME HERE</a>
             </button>
           </div>

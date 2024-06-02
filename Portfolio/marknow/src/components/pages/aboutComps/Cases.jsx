@@ -42,7 +42,7 @@ function Cases() {
 
           <div className="case" style={{ display: "flex", order: "2" }}>
             <div style={{ order: "2" }}>
-              <h2 className="title">Faceduck Case</h2>
+              <h2>Faceduck Case</h2>
 
               <p>
                 Lorem ipsum dolor, sit amet consectetur adipisicing elit.

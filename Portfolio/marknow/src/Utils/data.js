@@ -29,17 +29,17 @@ export const profInfo = [
   },
   {
     profName: "Asi caka",
-    quote: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Possimus voluptas tempore dolorum voluptatem nihil delectus illo impedit modi, minima expedita, totam aliquid optio! Odio obcaecati similique alias minima dignissimos natus. Consectetur, enim dolor! Eum similique voluptatum maiores numquam ratione repudiandae!",
+    quote: "2",
     profFunction: "YouCook",
   },
   {
     profName: "Asi caka",
-    quote: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Possimus voluptas tempore dolorum voluptatem nihil delectus illo impedit modi, minima expedita, totam aliquid optio! Odio obcaecati similique alias minima dignissimos natus. Consectetur, enim dolor! Eum similique voluptatum maiores numquam ratione repudiandae!",
+    quote: "3",
     profFunction: "YouCook",
   },
   {
     profName: "Asi caka",
-    quote: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Possimus voluptas tempore dolorum voluptatem nihil delectus illo impedit modi, minima expedita, totam aliquid optio! Odio obcaecati similique alias minima dignissimos natus. Consectetur, enim dolor! Eum similique voluptatum maiores numquam ratione repudiandae!",
+    quote: "4",
     profFunction: "YouCook",
   },
 ];
