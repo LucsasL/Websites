@@ -15,14 +15,12 @@ function rotateText() {
 const Reach = () => {
   return (
     <>
-      <section id="reach">
+      <section id="reach" onLoad={() => rotateText()}>
         <div className="ceo"></div>
 
         <div className="earth">
           <picture>
-            <p className="txt" onLoad={() => rotateText()}>
-              REACHING. CONVERSION. RELATION.
-            </p>
+            <p className="txt">REACHING. CONVERSION. RELATION.</p>
             <img src={earth} alt="Earth" style={{ transform: "scale(1.01)" }} />
           </picture>
         </div>

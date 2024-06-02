@@ -1,4 +1,5 @@
 // Importing Hooks
+import { useRef } from "react";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 
@@ -7,6 +8,11 @@ import burger from "../../../img/burger.jpg";
 import shoes from "../../../img/shoes.jpg";
 
 const Showcase = () => {
+  const mouseMoveCont = useRef(null);
+  let img1 = useRef(null);
+  let img2 = useRef(null);
+  let img3 = useRef(null);
+
   useGSAP(() => {
     gsap.fromTo("span:nth-child(odd)",
     {
@@ -55,7 +61,7 @@ const Showcase = () => {
 
           <div className="content">
             <picture>
-              <img src={burger} alt="Coffee" />
+              <img src={burger} alt="Coffee" ref={img1} />
             </picture>
           </div>
         </div>
@@ -65,7 +71,7 @@ const Showcase = () => {
 
           <div className="content">
             <picture>
-              <img src={shoes} alt="Burger" />
+              <img src={shoes} alt="Burger" ref={img2} />
             </picture>
           </div>
         </div>
@@ -75,10 +81,12 @@ const Showcase = () => {
 
           <div className="content">
             <picture>
-              <img src={coffee} alt="Coffee" />
+              <img src={coffee} alt="Coffee" ref={img3} />
             </picture>
           </div>
         </div>
+
+        {/* <div className="mouse" ref={mouseMoveCont}></div> */}
       </section>
     </>
   );

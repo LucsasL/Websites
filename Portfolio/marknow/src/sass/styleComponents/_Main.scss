@@ -139,6 +139,16 @@ section#showcase {
       z-index: 1;
     }
   }
+
+  .mouse {
+    background: blue;
+
+    width: 100px;
+    height: 100px;
+    border: 5px solid black;
+
+    position: absolute;
+  }
 }
 
 // About Section
@@ -363,9 +373,11 @@ section#reach {
 
     width: 500px;
     height: 150px;
+    margin-bottom: 200px;
     border: 5px solid black;
     border-radius: 20px;
     transform: perspective(10px) rotateX(1deg);
+    align-self: flex-end;
   }
 
   .earth {
@@ -376,32 +388,37 @@ section#reach {
     border: 10px solid black;
     border-radius: 50%;
 
+    position: relative;
+    align-self: flex-start;
+    
     .txt {
       position: absolute;
       width: 100%;
       height: 100%;
-
+      
       animation: rot-txt 10s linear infinite;
     }
 
     .txt span {
+      text-align: center;
+      font-size: 3em;
+      font-weight: 900;
+
       position: absolute;
       top: -15%;
       left: 50%;
       transform-origin: 0 250px;
-      font-size: 1em;
-      font-weight: 900;
     }
 
-    // @keyframes rot-txt {
-    //   0% {
-    //     transform: rotate(0);
-    //   }
+    @keyframes rot-txt {
+      0% {
+        transform: rotate(0);
+      }
 
-    //   100% {
-    //     transform: rotate(360deg);
-    //   }
-    // }
+      100% {
+        transform: rotate(360deg);
+      }
+    }
   }
 }
 

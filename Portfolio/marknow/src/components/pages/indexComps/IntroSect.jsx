@@ -1,3 +1,6 @@
+// Hooks Import
+import { NavLink } from "react-router-dom";
+
 import { FaArrowRight } from "react-icons/fa";
 
 const IntroSect = () => {
@@ -16,13 +19,13 @@ const IntroSect = () => {
 
           <div>
             <button className="primary">
-              <a href="https://youtube.com">Learn More</a>
+              <a href="#about">Learn More</a>
             </button>
             <button className="secondary">
-              <a href="https://youtube.com">
+              <NavLink to="/about">
                 <span>SEE TEAM</span> 
                 <FaArrowRight className="buttArrow" />
-              </a>
+              </NavLink>
             </button>
           </div>
         </div>
