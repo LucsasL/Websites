@@ -486,7 +486,6 @@ section#services .primary {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 12px 20px;
 }
 section#services .primary:hover {
   box-shadow: 0px 0px black;
@@ -500,6 +499,7 @@ section#services .primary a {
 
 section#reach {
   height: 900px;
+  position: relative;
   display: flex;
   flex-flow: row nowrap;
   justify-content: space-around;
@@ -515,6 +515,14 @@ section#reach .ceo {
   border-radius: 20px;
   transform: perspective(10px) rotateX(1deg);
   align-self: flex-end;
+}
+section#reach .ceo .ceoName {
+  background: #5AD2F4;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  transform: perspective(none) rotate3d(none);
+  position: absolute;
 }
 section#reach .earth {
   background: #5AD2F4;
@@ -648,6 +656,17 @@ section#improve .primary a {
   padding: 12px 20px;
 }
 
+.servDiv {
+  width: 100%;
+  height: 100%;
+  border: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  pointer-events: none;
+}
+
 footer {
   background: #071108;
   color: white;
@@ -706,10 +725,11 @@ footer input[type=text] {
 footer input[type=submit] {
   background: #EF6F6C;
   width: 40px;
-  height: 40px;
+  height: 44px;
   margin-left: 10px;
   border-radius: 50%;
   line-height: 100%;
+  font: 900 1em "Inter", sans-serif;
   cursor: pointer;
 }
 footer .waves {
@@ -725,12 +745,19 @@ section#introAbout {
   height: calc(100vh - 85px);
   margin: 0;
   text-align: center;
+}
+section#introAbout > div {
+  width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-section#introAbout > div {
-  width: 65%;
+section#introAbout > div div {
+  width: 75%;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-around;
+  align-items: center;
 }
 section#introAbout h1 {
   font: 900 5em "Inter", sans-serif;

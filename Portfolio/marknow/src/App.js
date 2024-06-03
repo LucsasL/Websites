@@ -9,10 +9,9 @@ import Footer from "./components/Footer";
 import Home from "./components/pages/home";
 import About from "./components/pages/about";
 import Contact from "./components/pages/contact";
-
-// Styles and animations
-// import "./styles/index.css";
-// import "./animation";
+import Build from "./components/iframes/build";
+import Persuade from "./components/iframes/persuade";
+import Convert from "./components/iframes/convert";
 
 function App() {
   return (

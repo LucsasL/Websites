@@ -16,7 +16,9 @@ const Reach = () => {
   return (
     <>
       <section id="reach" onLoad={() => rotateText()}>
-        <div className="ceo"></div>
+        <div className="ceo">
+          <div className="ceoName"></div>
+        </div>
 
         <div className="earth">
           <p className="txt">REACHING. CONVERSION. RELATION.</p>

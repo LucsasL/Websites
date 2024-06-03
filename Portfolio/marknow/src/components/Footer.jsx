@@ -27,7 +27,7 @@ const Footer = () => {
             />
             <input
               type="submit"
-              value="→"
+              value=">"
               onClick={() =>
                 alert(
                   `This is a fictitious company and all of this site is a project to my portfolio. - Lucsas

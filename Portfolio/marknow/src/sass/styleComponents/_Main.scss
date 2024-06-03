@@ -366,13 +366,14 @@ section#services {
   }
 
   .primary {
-    @include primaryButton(true);
+    @include primaryButton;
   }
 }
 
 // Reach Settings
 section#reach {
   height: 900px;
+  position: relative;
 
   @include spaceAround;
 
@@ -386,6 +387,16 @@ section#reach {
     border-radius: 20px;
     transform: perspective(10px) rotateX(1deg);
     align-self: flex-end;
+
+    .ceoName {
+      background: $third;
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+      transform: perspective(none) rotate3d(none);
+
+      position: absolute;
+    }
   }
 
   .earth {
@@ -512,4 +523,18 @@ section#improve {
   .primary {
     @include primaryButton(true);
   }
+}
+
+// Media Settings
+.servDiv {
+  width: 100%;
+  height: 100%;
+  border: none;
+
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 2;
+
+  pointer-events: none;
 }

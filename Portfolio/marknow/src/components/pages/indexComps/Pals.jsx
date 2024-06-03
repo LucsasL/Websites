@@ -62,14 +62,18 @@ const Pals = () => {
 
   const arrOpacity = () => {
     if (position === 0) {
+      console.log(position);
       setPrevArrOpacity(0.3);
     } else {
+      console.log(position);
       setPrevArrOpacity(1);
     }
-
+    
     if (position === -300) {
+      console.log(position);
       setNextArrOpacity(0.3);
     } else {
+      console.log(position);
       setNextArrOpacity(1);
     }
   };

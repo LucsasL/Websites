@@ -61,11 +61,12 @@ footer {
       background: $secondary;
 
       width: 40px;
-      height: 40px;
+      height: 44px;
       margin-left: 10px;
       border-radius: 50%;
 
       line-height: 100%;
+      font: 900 1em $mainFont;
       
       cursor: pointer;
     }

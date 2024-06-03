@@ -9,11 +9,17 @@ section#introAbout {
   margin: 0;
 
   text-align: center;
-
-  @include center;
-
+  
   > div {
-    width: 65%;
+    width: 100%;
+    
+    @include center;
+    
+    div {
+      width: 75%;
+
+      @include verticalFlex;
+    }
   }
 
   h1 {
