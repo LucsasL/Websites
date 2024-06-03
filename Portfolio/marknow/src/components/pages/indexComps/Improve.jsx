@@ -18,8 +18,8 @@ const Improve = () => {
               BUY OUR BOOK
             </h2>
 
-            <button className="primary">
-              <a href="https://youtube.com">IMPROVE</a>
+            <button className="primary" onClick={() => alert("")}>
+              IMPROVE
             </button>
           </div>
 
@@ -31,20 +31,20 @@ const Improve = () => {
           </div>
 
           <div>
-            <button className="primary">
-              <a href="https://youtube.com">IMPROVE</a>
+            <button className="primary" onClick={() => alert("")}>
+              IMPROVE
             </button>
 
-            <button className="primary">
-              <a href="https://youtube.com">IMPROVE</a>
+            <button className="primary" onClick={() => alert("")}>
+              IMPROVE
             </button>
 
-            <button className="primary">
-              <a href="https://youtube.com">IMPROVE</a>
+            <button className="primary" onClick={() => alert("")}>
+              IMPROVE
             </button>
 
-            <button className="primary">
-              <a href="https://youtube.com">IMPROVE</a>
+            <button className="primary" onClick={() => alert("")}>
+              IMPROVE
             </button>
 
           </div>
@@ -54,4 +54,4 @@ const Improve = () => {
   )
 }
 
-export default Improve
+export default Improve;

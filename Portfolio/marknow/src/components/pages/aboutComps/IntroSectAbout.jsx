@@ -5,7 +5,6 @@ function IntroSectAbout() {
         <div>
           <div>
             <h1>WE ARE MARKDOWN</h1>
-
             <p>
               Lorem ipsum dolor sit, amet consectetur adipisicing elit. Est
               nesciunt earum eaque autem, perferendis assumenda sit quam nulla

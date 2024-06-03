@@ -43,7 +43,7 @@
 }
 
 // Buttons elements
-@mixin primaryButton {
+@mixin primaryButton($noLink: false) {
   background: $secondary;
   box-shadow: 0px 5px black;
 
@@ -51,14 +51,18 @@
   border: 2px solid $dark;
   border-radius: 10px;
   outline: none;
-
+  
   font-weight: bold;
 
   cursor: pointer;
-
+  
   transition: box-shadow .5s ease;
   
   @include center;
+
+  @if $noLink {
+    padding: 12px 20px;
+  }
 
   &:hover {
     box-shadow: 0px 0px black;

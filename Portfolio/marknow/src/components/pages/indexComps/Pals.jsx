@@ -31,39 +31,32 @@ const Pals = () => {
   });
 
   const scrollMsg = (arr) => {
-    switch (position) {
-      case 0:
-        setColor("#5AD2F4");
-        break;
-
-      case -100 && arr === "Prev":
-        setColor("#EF6F6C");
-        break;
-        
-      case -100 && arr === "Next":
-        setColor("#7FB685");
-        break;
-        
-      case -200 && arr === "Prev":
-        setColor("#F9C976");
-        break;
-
-        case -200 && arr === "Next":
-          setColor("#F9C976");
-          break;
-
-      case -300:
-        setColor("#7FB685");
-        break;
-
-      default:
-        break;
-    }
-
+    
     if (arr === "Prev" && position < 0) {
       setPosition(position + 100);
     } else if (arr === "Next" && position > -300) {
       setPosition(position - 100);
+    }
+
+    switch (position) {
+      case 0:
+        setColor("#EF6F6C");
+        break;
+
+      case -100:
+        setColor("#5AD2F4");
+        break;
+        
+      case -200:
+        setColor("#7FB685");
+        break;
+
+      case -300:
+        setColor("#F9C976");
+        break;
+
+      default:
+        break;
     }
   };
 

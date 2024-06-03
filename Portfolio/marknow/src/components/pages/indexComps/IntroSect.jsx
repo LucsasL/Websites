@@ -1,6 +1,10 @@
 // Hooks Import
 import { NavLink } from "react-router-dom";
 
+// Images
+import introImg from "../../../img/introImg.jpg";
+
+// Icons
 import { FaArrowRight } from "react-icons/fa";
 
 const IntroSect = () => {
@@ -32,7 +36,7 @@ const IntroSect = () => {
 
         <div className="imgDiv">
           <picture>
-            <img src="" alt="" />
+            <img src={introImg} alt="Marketing Office" />
           </picture>
         </div>
       </section>

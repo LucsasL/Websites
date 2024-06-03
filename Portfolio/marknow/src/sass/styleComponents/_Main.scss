@@ -30,11 +30,15 @@ section#intro {
     }
   }
 
-  div.imgDiv {
+  .imgDiv {
     width: 40%;
     height: 100%;
     border: 5px solid $dark;
     border-radius: 10px;
+  }
+
+  button.primary {
+    @include primaryButton;
   }
 }
 
@@ -360,6 +364,10 @@ section#services {
     text-align: center;
     margin-bottom: 50px;
   }
+
+  .primary {
+    @include primaryButton;
+  }
 }
 
 // Reach Settings
@@ -493,5 +501,9 @@ section#improve {
   .waves {
     position: absolute;
     top: -19.5%;
+  }
+
+  .primary {
+    @include primaryButton(true);
   }
 }

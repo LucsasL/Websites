@@ -2,7 +2,6 @@
 section#introAbout {
   background: url("../videos/marknowVideo.gif") no-repeat;
   background-size: cover;
-  backdrop-filter: brightness(.4);
   color: white;
 
   width: 100%;
@@ -19,10 +18,12 @@ section#introAbout {
 
   h1 {
     font: 900 5em $mainFont;
+    filter: drop-shadow(1px 1px 3px black);
   }
-
+  
   p {
     width: 100%;
+    filter: drop-shadow(1px 1px 3px black);
   }
 }
 
@@ -75,7 +76,7 @@ section#cases {
   }
 
   button {
-    @include primaryButton;
+    @include primaryButton(false);
   }
 }
 
@@ -212,7 +213,7 @@ section#join {
     
     button {
       width: 50%;
-      @include primaryButton;
+      @include primaryButton(false);
     }
   }
 }
