@@ -486,6 +486,7 @@ section#services .primary {
   display: flex;
   justify-content: center;
   align-items: center;
+  padding: 12px 20px;
 }
 section#services .primary:hover {
   box-shadow: 0px 0px black;
@@ -523,6 +524,14 @@ section#reach .earth {
   border-radius: 50%;
   position: relative;
   align-self: flex-start;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+section#reach .earth picture, section#reach .earth img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 section#reach .earth .txt {
   position: absolute;

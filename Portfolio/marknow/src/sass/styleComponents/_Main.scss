@@ -366,7 +366,7 @@ section#services {
   }
 
   .primary {
-    @include primaryButton;
+    @include primaryButton(true);
   }
 }
 
@@ -398,6 +398,12 @@ section#reach {
 
     position: relative;
     align-self: flex-start;
+
+    @include center;
+
+    picture, img {
+      @include center;
+    }
     
     .txt {
       position: absolute;

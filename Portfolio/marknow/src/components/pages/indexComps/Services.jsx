@@ -17,10 +17,8 @@ const Services = () => {
               minima eius? Perspiciatis, optio voluptatum.
             </p>
 
-            <button className="primary">
-              <a href="../iframes/build.html" target="servIframe">
-                Learn More
-              </a>
+            <button className="primary" target="servIframe">
+              Learn More
             </button>
           </div>
 
@@ -34,10 +32,8 @@ const Services = () => {
               minima eius? Perspiciatis, optio voluptatum.
             </p>
 
-            <button className="primary">
-              <a href="../iframes/persuade.html" target="servIframe">
-                Learn More
-              </a>
+            <button className="primary" target="servIframe">
+              Learn More
             </button>
           </div>
 
@@ -51,13 +47,13 @@ const Services = () => {
               minima eius? Perspiciatis, optio voluptatum.
             </p>
 
-            <button className="primary">
-              <a href="../iframes/convert.html" target="servIframe">
-                Learn More
-              </a>
+            <button className="primary" target="servIframe">
+              Learn More
             </button>
           </div>
         </div>
+
+        <div className="servDiv" name="servIframe"></div>
       </section>
     </>
   );

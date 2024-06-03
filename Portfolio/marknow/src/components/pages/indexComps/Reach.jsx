@@ -19,8 +19,8 @@ const Reach = () => {
         <div className="ceo"></div>
 
         <div className="earth">
+          <p className="txt">REACHING. CONVERSION. RELATION.</p>
           <picture>
-            <p className="txt">REACHING. CONVERSION. RELATION.</p>
             <img src={earth} alt="Earth" style={{ transform: "scale(1.01)" }} />
           </picture>
         </div>
