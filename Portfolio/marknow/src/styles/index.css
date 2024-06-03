@@ -142,6 +142,7 @@ main section {
 }
 
 section#intro {
+  height: 100%;
   display: flex;
   flex-flow: row nowrap;
   justify-content: space-around;
@@ -150,6 +151,12 @@ section#intro {
 }
 section#intro h1 {
   font: bold 3em "Inter", sans-serif;
+}
+section#intro picture, section#intro img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border-radius: 5px;
 }
 section#intro .introInfo {
   width: 50%;
@@ -446,6 +453,7 @@ section#services > div {
   gap: 30px;
 }
 section#services .services {
+  background: #ffdada;
   box-shadow: -10px 10px black;
   width: 400px;
   height: 600px;
@@ -861,7 +869,7 @@ section#top .profCont {
   width: 400%;
   position: relative;
   left: 150%;
-  transition: opacity 0.5s ease;
+  transition: all 0.5s ease;
   display: flex;
   flex-flow: row nowrap;
   justify-content: space-evenly;

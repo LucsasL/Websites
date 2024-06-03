@@ -8,7 +8,7 @@ import burger from "../../../img/burger.jpg";
 import shoes from "../../../img/shoes.jpg";
 
 const Showcase = () => {
-  const mouseMoveCont = useRef(null);
+  // const mouseMoveCont = useRef(null);
   let img1 = useRef(null);
   let img2 = useRef(null);
   let img3 = useRef(null);

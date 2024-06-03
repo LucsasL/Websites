@@ -1,5 +1,3 @@
-import { NavLink } from "react-router-dom";
-
 import "../../../styles/index.css";
 
 const Services = () => {
@@ -20,7 +18,7 @@ const Services = () => {
             </p>
 
             <button className="primary" target="servIframe">
-              <a href="../../../iframes/build.html" target="servIframe">
+              <a href="../../iframes/build.jsx" target="servIframe">
                 Learn More
               </a>
             </button>
@@ -37,7 +35,7 @@ const Services = () => {
             </p>
 
             <button className="primary" target="servIframe">
-              <a href="../../../iframes/persuade.html" target="servIframe">
+              <a href="../../iframes/persuade.jsx" target="servIframe">
                 Learn More
               </a>
             </button>
@@ -54,7 +52,7 @@ const Services = () => {
             </p>
 
             <button className="primary" target="servIframe">
-              <a href="../../../iframes/convert.html" target="servIframe">
+              <a href="../../iframes/convert.jsx" target="servIframe">
                 Learn More
               </a>
             </button>

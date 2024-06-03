@@ -17,8 +17,8 @@ import youDude from "../../../img/YouDude.png";
 const Pals = () => {
   const [position, setPosition] = useState(0);
   const [color, setColor] = useState("#EF6F6C");
-  const [prevArrOpacity, setPrevArrOpacity] = useState(1);
-  const [nextArrOpacity, setNextArrOpacity] = useState(1);
+  // const [prevArrOpacity, setPrevArrOpacity] = useState(1);
+  // const [nextArrOpacity, setNextArrOpacity] = useState(1);
 
   useGSAP(() => {
     gsap.to(".PrArrow", {
@@ -31,7 +31,6 @@ const Pals = () => {
   });
 
   const scrollMsg = (arr) => {
-    
     if (arr === "Prev" && position < 0) {
       setPosition(position + 100);
     } else if (arr === "Next" && position > -300) {
@@ -60,23 +59,23 @@ const Pals = () => {
     }
   };
 
-  const arrOpacity = () => {
-    if (position === 0) {
-      console.log(position);
-      setPrevArrOpacity(0.3);
-    } else {
-      console.log(position);
-      setPrevArrOpacity(1);
-    }
+  // const arrOpacity = () => {
+  //   if (position === 0) {
+  //     console.log(position);
+  //     setPrevArrOpacity(0.3);
+  //   } else {
+  //     console.log(position);
+  //     setPrevArrOpacity(1);
+  //   }
     
-    if (position === -300) {
-      console.log(position);
-      setNextArrOpacity(0.3);
-    } else {
-      console.log(position);
-      setNextArrOpacity(1);
-    }
-  };
+  //   if (position === -300) {
+  //     console.log(position);
+  //     setNextArrOpacity(0.3);
+  //   } else {
+  //     console.log(position);
+  //     setNextArrOpacity(1);
+  //   }
+  // };
 
   return (
     <>
@@ -85,8 +84,8 @@ const Pals = () => {
           <div
             className="arrowsNav"
             onClick={() => scrollMsg("Prev")}
-            onLoad={() => arrOpacity()}
-            style={{ opacity: prevArrOpacity }}
+            // onLoad={() => arrOpacity()}
+            // style={{ opacity: prevArrOpacity }}
           >
             <picture>
               <img
@@ -100,8 +99,8 @@ const Pals = () => {
           <div
             className="arrowsNav"
             onClick={() => scrollMsg("Next")}
-            onLoad={() => arrOpacity()}
-            style={{ opacity: nextArrOpacity }}
+            // onLoad={() => arrOpacity()}
+            // style={{ opacity: nextArrOpacity }}
           >
             <picture>
               <img src={arrowNext} alt="Next Testimonial" className="NeArrow" />

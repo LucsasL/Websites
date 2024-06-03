@@ -15,10 +15,19 @@ main {
 
 // Intro Section
 section#intro {
+  height: 100%;
+
   @include spaceAround;
 
   h1 {
     font: bold 3em $mainFont;
+  }
+
+  picture, img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
   }
 
   .introInfo {
@@ -330,6 +339,7 @@ section#services {
   }
 
   .services {
+    background: #ffdada;
     box-shadow: -10px 10px black;
 
     width: 400px;
