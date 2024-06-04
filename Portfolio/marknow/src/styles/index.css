@@ -869,7 +869,9 @@ section#top .profCont {
   width: 400%;
   position: relative;
   left: 150%;
-  transition: all 0.5s ease;
+  transition-property: border;
+  transition-duration: 2.5s;
+  transition-timing-function: ease;
   display: flex;
   flex-flow: row nowrap;
   justify-content: space-evenly;
@@ -903,15 +905,28 @@ section#top .profInfo .profDesc .buttonDiv {
   align-items: center;
 }
 section#top .profInfo .imgProf {
-  background: url("../img/big-professional-round.jpg") no-repeat center;
-  background-size: cover;
   width: 550px;
   height: 550px;
   border: 15px solid #EF6F6C;
   border-radius: 50%;
+  transition-property: border;
+  transition-duration: 2.5s;
+  transition-timing-function: ease;
 }
 section#top .profInfo button {
   cursor: pointer;
+}
+section#top .profInfo:nth-child(1) img {
+  border-radius: 50%;
+}
+section#top .profInfo:nth-child(2) img {
+  border-radius: 5px;
+}
+section#top .profInfo:nth-child(3) img {
+  clip-path: polygon(0 50%, 50% 0, 100% 50%, 50% 100%);
+}
+section#top .profInfo:nth-child(4) img {
+  clip-path: polygon(50% 0%, 100% 38%, 82% 100%, 18% 100%, 0% 38%);
 }
 section#top .arrowsNav {
   position: absolute;

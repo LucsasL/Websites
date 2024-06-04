@@ -5,8 +5,15 @@ import { useState } from "react";
 import arrowPrev from "../../../icons/back-arrow.svg";
 import arrowNext from "../../../icons/front-arrow.svg";
 
+import prof1 from "../../../img/professional-round.jpg";
+import prof2 from "../../../img/professional-square.jpg";
+import prof3 from "../../../img/professional-triangle.jpg";
+import prof4 from "../../../img/Professional-pentagono.jpg";
+
 // Importing Data
 import { profInfo } from "../../../Utils/data";
+
+const profs = [prof1, prof2, prof3, prof4];
 
 function Top() {
   const [position, setPosition] = useState(150);
@@ -134,7 +141,7 @@ function Top() {
 
           <div className="profCont" style={{ left: (position + "%") }}>
           {
-            profInfo.map(({ profName, quote, profFunction }) => {
+            profInfo.map(({ profName, quote, profFunction }, index) => {
               return (
                 <div 
                   className="profInfo"
@@ -166,7 +173,11 @@ function Top() {
                       border: `15px solid ${profColor}`,
                       borderRadius: profShape,
                     }}
-                  ></div>
+                  >
+                    <picture>
+                      <img src={profs[index]} alt="Professional" />
+                    </picture>
+                  </div>
                 </div>
                 );
               })

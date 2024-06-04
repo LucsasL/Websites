@@ -106,7 +106,9 @@ section#top {
     position: relative;
     left: 150%;
 
-    transition: all .5s ease;
+    transition-property: border;
+    transition-duration: 2.5s;
+    transition-timing-function: ease;
 
     @include spaceEvenly;
     gap: 0;
@@ -134,17 +136,39 @@ section#top {
     }
     
     .imgProf {
-      background: url("../img/big-professional-round.jpg") no-repeat center;
-      background-size: cover;
-
       width: 550px;
       height: 550px;
       border: 15px solid $secondary;
       border-radius: 50%;
+
+      transition-property: border;
+      transition-duration: 2.5s;
+      transition-timing-function: ease;
     }
 
     button {
       cursor: pointer;
+    }
+
+    &:nth-child(1) {
+      img {
+        border-radius: 50%;
+      }
+    }
+    &:nth-child(2) {
+      img {
+        border-radius: 5px;
+      }
+    }
+    &:nth-child(3) {
+      img {
+        clip-path: polygon(0 50%, 50% 0, 100% 50%, 50% 100%);
+      }
+    }
+    &:nth-child(4) {
+      img {
+        clip-path: polygon(50% 0%, 100% 38%, 82% 100%, 18% 100%, 0% 38%);
+      }
     }
   }
 
