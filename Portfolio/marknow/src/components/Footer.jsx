@@ -48,7 +48,7 @@ Project Link: https://github.com/lucsasl`
                 <NavLink to="/about">ABOUT US</NavLink>
               </li>
               <li>
-                <NavLink to="/">SERVICES</NavLink>
+                <NavLink to="/#services">SERVICES</NavLink>
               </li>
               <li>
                 <NavLink to="/contact">CONTACT</NavLink>
