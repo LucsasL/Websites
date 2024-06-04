@@ -51,45 +51,44 @@ const Pals = () => {
       switch (position - 100) {
         case 0:
           setColor("#EF6F6C");
-          break;
+          return;
   
         case -100:
           setColor("#5AD2F4");
-          break;
+          return;
           
         case -200:
           setColor("#7FB685");
-          break;
+          return;
   
         case -300:
           setColor("#F9C976");
-          break;
+          return;
   
         default:
-          break;
+          return;
       }
-    } else {
-      switch (position + 100) {
-        case 0:
-          setColor("#EF6F6C");
-          break;
-  
-        case -100:
-          setColor("#5AD2F4");
-          break;
-          
-        case -200:
-          setColor("#7FB685");
-          break;
-  
-        case -300:
-          setColor("#F9C976");
-          break;
-  
-        default:
-          break;
-      }
+    }
 
+    switch (position + 100) {
+      case 0:
+        setColor("#EF6F6C");
+        return;
+
+      case -100:
+        setColor("#5AD2F4");
+        return;
+        
+      case -200:
+        setColor("#7FB685");
+        return;
+
+      case -300:
+        setColor("#F9C976");
+        return;
+
+      default:
+        return;
     }
   };
 

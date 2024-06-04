@@ -25,25 +25,39 @@ function Top() {
 
     }
 
-    changeProfStyle(position);
+    changeProfStyle(position, Arr);
   }
 
-  const arrOpacity = () => {
-    if (position === 150) {
-      setPrevArrOpacity(0.3);
-    } else {
-      setPrevArrOpacity(1);
+  
+  const changeProfStyle = (msg, arr) => {
+    if (arr === "Next") {
+      switch (msg - 100) {
+        case 150:
+          setProfColor("#EF6F6C");
+          setProfShape("50%");
+          return;
+  
+        case 50:
+          setProfColor("#5AD2F4");
+          setProfShape("20px");
+          return;
+          
+        case -50:
+          setProfColor("#7FB685");
+          setProfShape("70%");
+          return;
+          
+        case -150:
+          setProfColor("#F9C976");
+          setProfShape("20%");
+          return;
+          
+        default:
+          return;
+      }
     }
 
-    if (position === -150) {
-      setNextArrOpacity(0.3);
-    } else {
-      setNextArrOpacity(1);
-    }
-  };
-
-  const changeProfStyle = (msg) => {
-    switch (msg) {
+    switch (msg + 100) {
       case 150:
         setProfColor("#EF6F6C");
         setProfShape("50%");
@@ -53,21 +67,36 @@ function Top() {
         setProfColor("#5AD2F4");
         setProfShape("20px");
         return;
-
+        
       case -50:
         setProfColor("#7FB685");
         setProfShape("70%");
         return;
-
+        
       case -150:
         setProfColor("#F9C976");
         setProfShape("20%");
         return;
-
+        
       default:
         return;
     }
-  };
+  }
+  
+          
+  // const arrOpacity = () => {
+  //   if (position === 150) {
+  //     setPrevArrOpacity(0.3);
+  //   } else {
+  //     setPrevArrOpacity(1);
+  //   }
+
+  //   if (position === -150) {
+  //     setNextArrOpacity(0.3);
+  //   } else {
+  //     setNextArrOpacity(1);
+  //   }
+  // };
 
   return (
     <>
@@ -76,7 +105,7 @@ function Top() {
           <div
             className="arrowsNav"
             onClick={() => changeProf("Prev")}
-            onLoad={() => arrOpacity()}
+            // onLoad={() => arrOpacity()}
             style={{ opacity: prevArrOpacity }}
           >
             <picture>
@@ -91,7 +120,7 @@ function Top() {
           <div
             className="arrowsNav"
             onClick={() => changeProf("Next")}
-            onLoad={() => arrOpacity()}
+            // onLoad={() => arrOpacity()}
             style={{ opacity: nextArrOpacity }}
           >
             <picture>
