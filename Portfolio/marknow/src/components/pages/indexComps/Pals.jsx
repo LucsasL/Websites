@@ -1,5 +1,5 @@
 // Importing Hooks
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 
@@ -20,6 +20,9 @@ const Pals = () => {
   // const [prevArrOpacity, setPrevArrOpacity] = useState(1);
   // const [nextArrOpacity, setNextArrOpacity] = useState(1);
 
+  const palsTitle = useRef(null);
+  const palsCompCont = useRef(null);
+
   useGSAP(() => {
     gsap.to(".PrArrow", {
       x: -5,
@@ -30,6 +33,13 @@ const Pals = () => {
     });
   });
 
+  useEffect(() => {
+    palsTitle.current.style.color = {color};
+    palsCompCont.current.style.background = {color};
+    console.log(`Text color changed to: ${color}`);
+    console.log(`Background color changed to: ${color}`);
+  });
+
   const scrollMsg = (arr) => {
     if (arr === "Prev" && position < 0) {
       setPosition(position + 100);
@@ -37,25 +47,49 @@ const Pals = () => {
       setPosition(position - 100);
     }
 
-    switch (position) {
-      case 0:
-        setColor("#EF6F6C");
-        break;
+    if (arr === "Next") {
+      switch (position - 100) {
+        case 0:
+          setColor("#EF6F6C");
+          break;
+  
+        case -100:
+          setColor("#5AD2F4");
+          break;
+          
+        case -200:
+          setColor("#7FB685");
+          break;
+  
+        case -300:
+          setColor("#F9C976");
+          break;
+  
+        default:
+          break;
+      }
+    } else {
+      switch (position + 100) {
+        case 0:
+          setColor("#EF6F6C");
+          break;
+  
+        case -100:
+          setColor("#5AD2F4");
+          break;
+          
+        case -200:
+          setColor("#7FB685");
+          break;
+  
+        case -300:
+          setColor("#F9C976");
+          break;
+  
+        default:
+          break;
+      }
 
-      case -100:
-        setColor("#5AD2F4");
-        break;
-        
-      case -200:
-        setColor("#7FB685");
-        break;
-
-      case -300:
-        setColor("#F9C976");
-        break;
-
-      default:
-        break;
     }
   };
 
@@ -107,7 +141,7 @@ const Pals = () => {
             </picture>
           </div>
 
-          <h1 style={{ color: color }}>OUR CLIENTS APPROVE</h1>
+          <h1 style={{ color: color }} ref={palsTitle}>OUR CLIENTS APPROVE</h1>
 
           <div
             className="msg"
@@ -129,7 +163,7 @@ const Pals = () => {
           </div>
         </div>
 
-        <div className="palsComp" style={{ background: color }}>
+        <div className="palsComp" style={{ background: color }} ref={palsCompCont}>
           <div>
             <picture>
               <img src={poogle} alt="Poogle" />
