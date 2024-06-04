@@ -143,27 +143,22 @@ function Top() {
           {
             profInfo.map(({ profName, quote, profFunction }, index) => {
               return (
-                <div 
+                <div
                   className="profInfo"
-                  key={Math.floor(Math.random() * 100)}
+                  key={index}
+                  style={{ position: "relative", left: `${0}%` }}
                 >
                   <div className="profDesc">
                     <p>
-                      {quote}{profName}{profFunction}
+                      {quote}
+                      {profName}
+                      {profFunction}
                     </p>
                     <div className="buttonDiv">
-                      <button onClick={() => setPosition(150)}>
-
-                      </button>
-                      <button onClick={() => setPosition(50)}>
-
-                      </button>
-                      <button onClick={() => setPosition(-50)}>
-
-                      </button>
-                      <button onClick={() => setPosition(-150)}>
-
-                      </button>
+                      <button onClick={() => setPosition(150)}></button>
+                      <button onClick={() => setPosition(50)}></button>
+                      <button onClick={() => setPosition(-50)}></button>
+                      <button onClick={() => setPosition(-150)}></button>
                     </div>
                   </div>
 
@@ -179,7 +174,7 @@ function Top() {
                     </picture>
                   </div>
                 </div>
-                );
+              );
               })
             }
           </div>

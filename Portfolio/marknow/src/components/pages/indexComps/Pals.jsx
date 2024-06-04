@@ -148,17 +148,19 @@ const Pals = () => {
               left: position + "%",
             }}
           >
-            {palsInfo.map(({ author, quote, ceo }) => {
-              return (
-                <div className="palsInfo" key={Math.floor(Math.random() * 100)}>
-                  <p>{quote}</p>
-                  <h2 style={{ color: color }}>
-                    {author} <br />
-                    <span>CEO OF {ceo}</span>
-                  </h2>
-                </div>
-              );
-            })}
+            {
+              palsInfo.map(({ author, quote, ceo }, index) => {
+                return (
+                  <div className="palsInfo" key={index} style={{ position: "relative", left: `${0}%` }}>
+                    <p>{quote}</p>
+                    <h2 style={{ color: color }}>
+                      {author} <br />
+                      <span>CEO OF {ceo}</span>
+                    </h2>
+                  </div>
+                );
+              })
+            }
           </div>
         </div>
 
