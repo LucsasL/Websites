@@ -142,7 +142,8 @@ main section {
 }
 
 section#intro {
-  height: 100%;
+  height: calc(100vh - 85px);
+  margin: 0;
   display: flex;
   flex-flow: row nowrap;
   justify-content: space-around;
@@ -160,6 +161,7 @@ section#intro picture, section#intro img {
 }
 section#intro .introInfo {
   width: 50%;
+  height: auto;
 }
 section#intro .introInfo div {
   display: flex;
@@ -167,7 +169,7 @@ section#intro .introInfo div {
 }
 section#intro .imgDiv {
   width: 40%;
-  height: 100%;
+  height: auto;
   border: 5px solid #071108;
   border-radius: 10px;
 }
@@ -761,18 +763,20 @@ section#introAbout > div {
   align-items: center;
 }
 section#introAbout > div div {
-  width: 75%;
+  width: 85%;
   display: flex;
   flex-flow: column nowrap;
   justify-content: space-around;
   align-items: center;
 }
 section#introAbout h1 {
-  font: 900 5em "Inter", sans-serif;
+  width: 115%;
+  font: 900 7em "Inter", sans-serif;
   filter: drop-shadow(1px 1px 3px black);
+  z-index: 1;
 }
 section#introAbout p {
-  width: 100%;
+  width: 80%;
   filter: drop-shadow(1px 1px 3px black);
 }
 

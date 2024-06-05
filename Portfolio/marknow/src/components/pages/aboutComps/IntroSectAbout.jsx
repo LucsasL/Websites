@@ -5,7 +5,10 @@ function IntroSectAbout() {
         <div style={{ widows: "100%", height: "100%", backdropFilter: "brightness(.2)" }}>
           <div>
             <div>
-              <h1>WE ARE MARKDOWN</h1>
+              <h1>
+                WE ARE MARKNOW
+              </h1>
+              
               <p>
                 Lorem ipsum dolor sit, amet consectetur adipisicing elit. Est
                 nesciunt earum eaque autem, perferendis assumenda sit quam nulla

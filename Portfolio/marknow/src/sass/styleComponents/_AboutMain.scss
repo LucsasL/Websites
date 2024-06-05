@@ -16,19 +16,21 @@ section#introAbout {
     @include center;
     
     div {
-      width: 75%;
+      width: 85%;
 
       @include verticalFlex;
     }
   }
 
   h1 {
-    font: 900 5em $mainFont;
+    width: 115%;
+    font: 900 7em $mainFont;
     filter: drop-shadow(1px 1px 3px black);
+    z-index: 1;
   }
   
   p {
-    width: 100%;
+    width: 80%;
     filter: drop-shadow(1px 1px 3px black);
   }
 }

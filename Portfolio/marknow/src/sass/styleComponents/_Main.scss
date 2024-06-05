@@ -15,7 +15,8 @@ main {
 
 // Intro Section
 section#intro {
-  height: 100%;
+  height: calc(100vh - 85px);
+  margin: 0;
 
   @include spaceAround;
 
@@ -32,6 +33,7 @@ section#intro {
 
   .introInfo {
     width: 50%;
+    height: auto;
 
     div {
       display: flex;
@@ -41,7 +43,7 @@ section#intro {
 
   .imgDiv {
     width: 40%;
-    height: 100%;
+    height: auto;
     border: 5px solid $dark;
     border-radius: 10px;
   }
