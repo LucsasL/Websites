@@ -31,7 +31,7 @@ const Footer = () => {
               onClick={() =>
                 alert(
                   `This is a fictitious company and all of this site is a project to my portfolio. - Lucsas
-Project Link: https://github.com/lucsasl`
+Project Link: https://github.com/LucsasL/MARKNOW`
                 )
               }
             />
@@ -61,13 +61,31 @@ Project Link: https://github.com/lucsasl`
 
             <ul>
               <li>
-                <a href="https://www.instagram.com/lucsas.l/" target="_blank" rel="noopener noreferrer">@LUCSAS.L</a>
+                <a
+                  href="https://www.instagram.com/lucsas.l/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  @LUCSAS.L
+                </a>
               </li>
               <li>
-                <a href="https://github.com/lucsasl" target="_blank" rel="noopener noreferrer">@LUCSASL</a>
+                <a
+                  href="https://github.com/lucsasl"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  @LUCSASL
+                </a>
               </li>
               <li>
-                <a href="https://www.linkedin.com/in/lucsas/" target="_blank" rel="noopener noreferrer">@LUCAS LIRA</a>
+                <a
+                  href="https://www.linkedin.com/in/lucsas/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  @LUCAS LIRA
+                </a>
               </li>
             </ul>
           </div>
