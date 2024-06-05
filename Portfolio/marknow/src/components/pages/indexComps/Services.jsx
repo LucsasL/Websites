@@ -1,3 +1,5 @@
+import Iframe from "react-iframe";
+
 import "../../../styles/index.css";
 
 const Services = () => {
@@ -59,7 +61,11 @@ const Services = () => {
           </div>
         </div>
 
-        <iframe className="servDiv" name="servIframe" title="Services"></iframe>
+        <Iframe 
+          className="servDiv" 
+          name="servIframe" 
+          title="Services"
+        ></Iframe>
       </section>
     </>
   );
