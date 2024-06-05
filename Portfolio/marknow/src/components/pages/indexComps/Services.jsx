@@ -19,8 +19,13 @@ const Services = () => {
               minima eius? Perspiciatis, optio voluptatum.
             </p>
 
-            <button className="primary" target="servIframe">
-              <a href="../../iframes/build.jsx" target="servIframe">
+            <button className="primary">
+              <a href="#" onClick={() =>
+                alert(
+                  `This is a fictitious company and all of this site is a project to my portfolio. - Lucsas
+Project Link: https://github.com/LucsasL/MARKNOW`
+                )
+              }>
                 Learn More
               </a>
             </button>
@@ -36,8 +41,13 @@ const Services = () => {
               minima eius? Perspiciatis, optio voluptatum.
             </p>
 
-            <button className="primary" target="servIframe">
-              <a href="../../iframes/persuade.jsx" target="servIframe">
+            <button className="primary">
+              <a href="#" onClick={() =>
+                alert(
+                  `This is a fictitious company and all of this site is a project to my portfolio. - Lucsas
+Project Link: https://github.com/LucsasL/MARKNOW`
+                )
+              }>
                 Learn More
               </a>
             </button>
@@ -53,22 +63,23 @@ const Services = () => {
               minima eius? Perspiciatis, optio voluptatum.
             </p>
 
-            <button className="primary" target="servIframe">
-              <a href="../../iframes/convert.jsx" target="servIframe">
+            <button className="primary">
+              <a href="#" onClick={() =>
+                alert(
+                  `This is a fictitious company and all of this site is a project to my portfolio. - Lucsas
+Project Link: https://github.com/LucsasL/MARKNOW`
+                )
+              }>
                 Learn More
               </a>
             </button>
           </div>
         </div>
 
-        <Iframe 
-          className="servDiv" 
-          name="servIframe" 
-          title="Services"
-        ></Iframe>
+        <Iframe className="servDiv" name="servIframe" title="Services"></Iframe>
       </section>
     </>
   );
-}
+};
 
 export default Services;
