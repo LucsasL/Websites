@@ -873,9 +873,6 @@ section#top .profCont {
   width: 400%;
   position: relative;
   left: 150%;
-  transition-property: border;
-  transition-duration: 2.5s;
-  transition-timing-function: ease;
   display: flex;
   flex-flow: row nowrap;
   justify-content: space-evenly;

@@ -19,6 +19,7 @@ function Top() {
   const [position, setPosition] = useState(150);
   const [profColor, setProfColor] = useState("#EF6F6C");
   const [profShape, setProfShape] = useState("50%");
+
   const [prevArrOpacity, setPrevArrOpacity] = useState("50%");
   const [nextArrOpacity, setNextArrOpacity] = useState("50%");
 
@@ -51,12 +52,14 @@ function Top() {
           
         case -50:
           setProfColor("#7FB685");
-          setProfShape("70%");
+          setProfShape("clip-path: polygon(0 50%, 50% 0, 100% 50%, 50% 100%)");
           return;
           
         case -150:
           setProfColor("#F9C976");
-          setProfShape("20%");
+          setProfShape(
+            "clip-path: polygon(50% 0%, 100% 38%, 82% 100%, 18% 100%, 0% 38%)"
+          );
           return;
           
         default:
@@ -77,12 +80,14 @@ function Top() {
         
       case -50:
         setProfColor("#7FB685");
-        setProfShape("70%");
+        setProfShape("clip-path: polygon(0 50%, 50% 0, 100% 50%, 50% 100%)");
         return;
         
       case -150:
         setProfColor("#F9C976");
-        setProfShape("20%");
+        setProfShape(
+          "clip-path: polygon(50% 0%, 100% 38%, 82% 100%, 18% 100%, 0% 38%)"
+        );
         return;
         
       default:
@@ -136,7 +141,7 @@ function Top() {
           </div>
 
           <h1 style={{ color: profColor }}>
-            Be in the top with the greatest
+            BE IN THE TOP WITH THE GREATEST
           </h1>
 
           <div className="profCont" style={{ left: (position + "%") }}>
@@ -151,28 +156,47 @@ function Top() {
                   <div className="profDesc">
                     <p>
                       {quote}
-                      {profName}
-                      {profFunction}
                     </p>
+
+                    <h2>
+                      {profName} <br />
+                      <span>{profFunction}</span>
+                    </h2>
                     <div className="buttonDiv">
-                      <button onClick={() => setPosition(150)}></button>
-                      <button onClick={() => setPosition(50)}></button>
-                      <button onClick={() => setPosition(-50)}></button>
-                      <button onClick={() => setPosition(-150)}></button>
+                      <button onClick={() => changeProfStyle(150)}></button>
+                      <button onClick={() => changeProfStyle(50)}></button>
+                      <button onClick={() => changeProfStyle(-50)}></button>
+                      <button onClick={() => changeProfStyle(-150)}></button>
                     </div>
                   </div>
 
-                  <div
-                    className="imgProf"
-                    style={{
-                      border: `15px solid ${profColor}`,
-                      borderRadius: profShape,
-                    }}
-                  >
-                    <picture>
-                      <img src={profs[index]} alt="Professional" />
-                    </picture>
-                  </div>
+                  {
+                    index < 2 ? (
+                      <div
+                        className="imgProf"
+                        style={{
+                          border: `15px solid ${profColor}`,
+                          borderRadius: profShape,
+                        }}
+                      >
+                        <picture>
+                          <img src={profs[index]} alt="Professional" />
+                        </picture>
+                      </div>
+                    ) : (
+                      <div
+                        className="imgProf"
+                        style={{
+                          border: `15px solid ${profColor}`,
+                          clipPath: profShape,
+                        }}
+                      >
+                        <picture>
+                          <img src={profs[index]} alt="Professional" />
+                        </picture>
+                      </div>
+                    )
+                  }
                 </div>
               );
               })
