@@ -1,0 +1,219 @@
+@charset "UTF-8";
+
+/* General Settings */
+
+/* CSS Models */
+.two-columns {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+}
+
+.two-columns > div.txt-cont {
+  width: 60%;
+}
+
+.two-columns .img-div {
+  width: 60%;
+  height: 100%;
+}
+
+.space-around {
+  gap: 0px;
+}
+
+/* Header */
+.mainHeader {
+  display: block;
+}
+
+/* Main */
+main section {
+  width: 100%;
+  grid-column: 2 / span 10;
+}
+
+/* Intro Section */
+section#intro {
+  height: 600px;
+}
+
+/* About Section */
+section#about span:nth-child(odd) {
+  position: absolute;
+  top: 0;
+  left: -50%;
+}
+
+section#about span:nth-child(3) {
+  z-index: 1;
+  color: transparent;
+  -webkit-text-stroke: 3px black;
+}
+
+section#about span:nth-child(even) {
+  width: 100%;
+  text-align: right;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+}
+
+section#about span:nth-child(4) {
+  z-index: 1;
+  color: transparent;
+  -webkit-text-stroke: 3px black;
+}
+
+section#about > div {
+  width: 700px;
+  height: 500px;
+}
+
+section#about > #small1 {
+  background: white;
+  width: 400px;
+  height: 275px;
+  border: 2px solid black;
+  box-shadow: 10px 10px black;
+
+  position: absolute;
+  top: 55%;
+  left: 2%;
+}
+
+section#about > #small2 {
+  background: white;
+  width: 400px;
+  height: 275px;
+  border: 2px solid black;
+  box-shadow: 10px 10px black;
+
+  position: absolute;
+  top: -10%;
+  left: 70%;
+}
+
+/* Number Section */
+section#numbers {
+  height: 500px;
+}
+
+/* Pals Section */
+section#pals {
+  height: 600px;
+}
+
+.arrow {
+  display: block;
+}
+
+.testim {
+  width: 90%;
+  margin: auto;
+
+  grid-template-columns: 1fr 70% 1fr;
+}
+
+.testim p {
+  margin: 40px 20px;
+}
+
+/* Reach Section */
+section#reach {
+  height: 1000px;
+}
+
+.ceo {
+  width: 50%;
+  height: 60%;
+  align-self: flex-start;
+  position: relative;
+  order: 0;
+}
+
+.ceo iframe {
+  height: 100%;
+
+  position: absolute;
+  bottom: -2%;
+  z-index: 1;
+}
+
+.portal {
+  width: 90%;
+  height: 90px;
+  border: 5px solid var(--bg2);
+  border-radius: 35px;
+}
+
+/* Feats Section */
+section#feats {
+  height: 1200px;
+}
+
+section#feats .cont {
+  width: 90%;
+  height: 750px;
+
+  grid-column: 2 / span 9;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 30px;
+}
+
+section#feats .cont > div:nth-child(1) {
+  grid-area: 1 / 1 / span 2 / span 1;
+
+  display: flex;
+  align-items: center;
+}
+
+section#feats .cont > div:nth-child(1) h1 {
+  transform: rotate(-90deg);
+}
+
+section#feats .cont > div:nth-child(2) {
+  background: var(--bg);
+
+  padding: 20px 50px;
+
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-evenly;
+  grid-area: 1 / 2 / span 1 / span 2;
+}
+
+section#feats .cont > div:nth-child(3) {
+  background: var(--third);
+
+  padding: 20px;
+
+  grid-area: 2 / 2 / span 1 / span 1;
+}
+
+section#feats .cont > div:nth-child(4) {
+  grid-area: 2 / 3 / span 1 / span 1;
+
+  padding: 30px;
+
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  /* gap: 30px 20px; */
+}
+
+/* Footer settings */
+footer .cont {
+  height: 350px;
+  gap: 180px;
+}
+
+footer .cont > div {
+  height: 100%;
+}
+
+footer .cont > div:nth-child(1) {
+  width: auto;
+}
