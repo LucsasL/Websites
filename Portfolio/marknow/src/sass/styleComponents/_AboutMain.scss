@@ -232,7 +232,7 @@ section#join {
 
   p {
     text-align: center;
-    width: 55%;
+    width: 80%;
     margin: 25px 0px;
   }
 
@@ -242,6 +242,25 @@ section#join {
     button {
       width: 50%;
       @include primaryButton(false);
+    }
+  }
+
+  .adsImg {
+    animation: adsImg 3s infinite;
+  }
+
+  @keyframes adsImg {
+    0% {
+      transform: rotate(-30deg);
+      }
+      
+    50% {
+      transform: rotate(30deg);      
+    }
+      
+    100% {
+      transform: rotate(-30deg);
+
     }
   }
 }

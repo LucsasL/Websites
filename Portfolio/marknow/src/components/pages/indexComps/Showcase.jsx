@@ -1,5 +1,5 @@
 // Importing Hooks
-import { useRef } from "react";
+import { useState, useRef, useEffect } from "react";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 
@@ -8,10 +8,21 @@ import burger from "../../../img/burger.jpg";
 import shoes from "../../../img/shoes.jpg";
 
 const Showcase = () => {
-  // const mouseMoveCont = useRef(null);
-  let img1 = useRef(null);
-  let img2 = useRef(null);
-  let img3 = useRef(null);
+  const [windowAnim, setWindowAnim] = useState(false);
+  let windowsCont = useRef();
+  let img1 = useRef();
+  let img2 = useRef();
+  let img3 = useRef();
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(entry => {
+      if (entry.isIntersecting) {
+        setWindowAnim(true);
+      }
+    });
+
+    observer.observe(windowsCont.current);
+  });
 
   useGSAP(() => {
     gsap.fromTo("span:nth-child(odd)",
@@ -35,7 +46,7 @@ const Showcase = () => {
 
   return (
     <>
-      <section id="showcase">
+      <section id="showcase" ref={windowsCont}>
         <span>
           THE NEW WAY TO <br />
           MAKE ADVERTS

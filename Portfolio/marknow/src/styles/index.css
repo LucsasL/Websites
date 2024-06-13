@@ -979,7 +979,7 @@ section#join h1 {
 }
 section#join p {
   text-align: center;
-  width: 55%;
+  width: 80%;
   margin: 25px 0px;
 }
 section#join > div div {
@@ -1010,6 +1010,20 @@ section#join > div div button a {
   width: 100%;
   height: 100%;
   padding: 12px 20px;
+}
+section#join .adsImg {
+  animation: adsImg 3s infinite;
+}
+@keyframes adsImg {
+  0% {
+    transform: rotate(-30deg);
+  }
+  50% {
+    transform: rotate(30deg);
+  }
+  100% {
+    transform: rotate(-30deg);
+  }
 }
 
 section#form {
