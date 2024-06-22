@@ -32,19 +32,19 @@ It's still incomplete yet, but I'll work to fix the bug as soon as possible. Sin
 
 ### Responsive Design
 
-![]()
+![The layout of the page uses media queries, that shift the elements depending on the size of the device accessing the address, the image shows the page changing during the resize of the browser's window]()
 
 The interface uses CSS media queries that adapts depending on the device you're using, to `cellphones` to `TVs.`
 
 ### Scrollable sections
 
-![]()
+![The page has sections that scroll horizontally, showing information about the CEOs that made business with MARKNOW, the image present the feature]()
 
 The website contains sections with horizontal scroll that shows additional info about the business.
 
 ### Dynamic UI
 
-![]()
+![Dynamic Page that changes depending on the user interaction on the page, the image shows a section that is animated during scroll]()
 
 It changes the interface **dynamically,** showing additional info and making animations.
 
