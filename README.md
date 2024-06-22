@@ -12,14 +12,21 @@ It's still incomplete yet, but I'll work to fix the bug as soon as possible. Sin
 
 ## Technologies Used 
 
-- ***JavaScript;***
-- ***React JS;***
-- ***HTML;***
-- ***CSS;***
-- ***SASS;***
-- ***GSAP;***
-- ***Jest;***
-- ***Git;***
+- <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank"><img align="center" alt="JavaScript" width="30" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-plain.svg"></a> &nbsp; ***JavaScript;*** <br />
+
+- <a href="https://react.dev/" target="_blank"><img align="center" alt="React JS" height="30" width="30" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" /></a> &nbsp; ***React JS;***
+
+-  <a href="https://developer.mozilla.org/en-US/docs/Web/HTML" target="_blank"><img align="center" alt="Lucsas-HTML" height="30" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original.svg"></a> &nbsp; ***HTML;***
+
+- <a href="https://developer.mozilla.org/pt-BR/docs/Web/CSS" target="_blank"><img align="center" alt="Lucsas-CSS" height="30" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original.svg"></a> &nbsp; ***CSS;***
+
+- <a href="https://sass-lang.com/" target="_blank"><img align="center" alt="Sass" height="30" width="30" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sass/sass-original.svg" /></a> &nbsp; ***SASS;***
+
+- <a href="https://gsap.com/" target="_blank"><img align="center" alt="GSAP" height="30" width="30" src="img/gsap.svg" /></a> &nbsp; ***GSAP;***
+
+- <a href="https://jestjs.io/" target="_blank"><img align="center" alt="Jest JS" height="30" width="30" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/jest/jest-plain.svg" /></a> &nbsp; ***Jest;***
+
+- <a href="https://git-scm.com/" target="_blank"><img align="center" alt="Git" width="30" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg"></a> &**nbsp**; ***Git;***
 
 ## Features
 
